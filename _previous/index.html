@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monika K — Flutter Developer</title>
+  <meta name="description"
+    content="Monika K — Flutter Developer based in Trichy, India. Building responsive, user-friendly and scalable mobile applications with Flutter and Dart." />
+  <meta name="theme-color" content="#5b5bd6" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      document.documentElement.classList.remove('no-js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo" aria-label="Monika K — home">
+        <span class="nav__logo-mark">M</span>
+        <span class="nav__logo-text">Monika K</span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button class="icon-btn nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="nav-menu">
+          <span class="burger"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__badge reveal">
+            <span class="pulse-dot"></span> Open to Flutter opportunities
+          </p>
+          <h1 class="hero__title reveal">Hi, I'm <span class="accent">Monika K</span></h1>
+          <p class="hero__role reveal">Flutter Developer</p>
+          <p class="hero__desc reveal">
+            I build responsive, user-friendly and scalable mobile applications using Flutter and Dart.
+          </p>
+
+          <div class="hero__cta reveal">
+            <a href="#projects" class="btn btn--primary">
+              View My Projects
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost">Contact Me</a>
+          </div>
+
+          <ul class="socials reveal" aria-label="Social links">
+            <!-- TODO: replace with your real GitHub URL -->
+            <li><a class="social" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" stroke="none"
+                    d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z" />
+                </svg>
+              </a></li>
+            <!-- TODO: replace with your real LinkedIn URL -->
+            <li><a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" stroke="none"
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                </svg>
+              </a></li>
+            <li><a class="social" href="mailto:monikaksee0911@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-10 6L2 7" />
+                </svg>
+              </a></li>
+          </ul>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="app-bar">
+                <span class="app-bar__title">Dashboard</span>
+                <span class="app-bar__avatar"></span>
+              </div>
+              <div class="app-card app-card--hero">
+                <span class="sk sk--sm"></span>
+                <span class="sk sk--lg"></span>
+                <div class="app-card__row">
+                  <span class="chip">Provider</span>
+                  <span class="chip">REST</span>
+                </div>
+              </div>
+              <div class="app-grid">
+                <div class="app-tile"><span class="app-tile__icon"></span><span class="sk"></span></div>
+                <div class="app-tile"><span class="app-tile__icon app-tile__icon--alt"></span><span class="sk"></span>
+                </div>
+              </div>
+              <div class="app-list">
+                <div class="app-list__item"><span class="dot"></span><span class="sk"></span></div>
+                <div class="app-list__item"><span class="dot"></span><span class="sk sk--short"></span></div>
+                <div class="app-list__item"><span class="dot"></span><span class="sk"></span></div>
+              </div>
+              <div class="app-nav">
+                <span class="on"></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="code-card">
+            <div class="code-card__bar"><i></i><i></i><i></i><span>main.dart</span></div>
+            <pre><code><span class="k">class</span> <span class="t">Monika</span> <span class="k">extends</span> <span class="t">Developer</span> {
+  <span class="t">String</span> role = <span class="s">'Flutter Dev'</span>;
+  <span class="t">List</span> stack = [<span class="s">'Dart'</span>, <span class="s">'Provider'</span>];
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">About Me</span>
+          <h2 class="section__title">Building mobile apps that feel right</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__text reveal">
+            <p>
+              I'm a <strong>Flutter Developer with 1+ year of professional experience</strong> building
+              scalable, user-friendly mobile applications with Flutter and Dart. I enjoy turning UI designs
+              into responsive screens, integrating REST APIs, and structuring apps with clean,
+              maintainable architecture.
+            </p>
+            <p>
+              My day-to-day work covers state management with Provider, Firebase, JSON parsing and
+              model classes, local storage and caching. I'm always learning new technologies and looking
+              for ways to improve application architecture.
+            </p>
+            <p>
+              I also have working knowledge of <strong>HTML and CSS</strong> for web development and UI implementation.
+            </p>
+          </div>
+
+          <ul class="stats reveal">
+            <li class="stat"><span class="stat__num">1+</span><span class="stat__label">Year as a Flutter
+                Developer</span></li>
+            <li class="stat"><span class="stat__num">6</span><span class="stat__label">Mobile apps worked on</span></li>
+            <li class="stat"><span class="stat__num">AR/VR</span><span class="stat__label">Immersive app
+                experience</span></li>
+            <li class="stat"><span class="stat__num">Trichy</span><span class="stat__label">Tamil Nadu, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Skills</span>
+          <h2 class="section__title">Technologies I work with</h2>
+        </header>
+
+        <div class="skills">
+          <article class="skill-card skill-card--primary reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="6" y="2" width="12" height="20" rx="2" />
+                  <path d="M11 18h2" />
+                </svg></span>
+              <h3>Mobile Development</h3>
+            </div>
+            <ul class="badges">
+              <li class="badge badge--accent">Flutter</li>
+              <li class="badge badge--accent">Dart</li>
+              <li class="badge badge--accent">Provider</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h10" />
+                  <circle cx="19" cy="17" r="2" />
+                </svg></span>
+              <h3>Backend &amp; APIs</h3>
+            </div>
+            <ul class="badges">
+              <li class="badge">REST APIs</li>
+              <li class="badge">Firebase</li>
+              <li class="badge">Firestore</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <ellipse cx="12" cy="5" rx="8" ry="3" />
+                  <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" />
+                </svg></span>
+              <h3>Database &amp; Storage</h3>
+            </div>
+            <ul class="badges">
+              <li class="badge">SQLite</li>
+              <li class="badge">SharedPreferences</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+                </svg></span>
+              <h3>Web</h3>
+            </div>
+            <ul class="badges">
+              <li class="badge">HTML</li>
+              <li class="badge">CSS</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--wide reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg></span>
+              <h3>Tools</h3>
+            </div>
+            <ul class="badges">
+              <li class="badge">Git</li>
+              <li class="badge">GitHub</li>
+              <li class="badge">Postman</li>
+              <li class="badge">Figma</li>
+              <li class="badge">VS Code</li>
+              <li class="badge">Android Studio</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Projects</span>
+          <h2 class="section__title">Mobile apps I've built</h2>
+          <p class="section__sub">Production Flutter applications covering API integration, maps, notifications, field
+            operations and AR/VR.</p>
+        </header>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project__top">
+              <span class="project__icon" style="--hue: 245">AF</span>
+              <span class="project__tag">Business App</span>
+            </div>
+            <h3 class="project__title">A &amp; F Venturez</h3>
+            <p class="project__desc">
+              Android app with responsive UI screens and smooth navigation. Integrated REST APIs for dynamic
+              data and JSON parsing, used Provider for state management, and applied third-party packages
+              to improve performance while keeping a clean architecture.
+            </p>
+            <ul class="tech">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>Provider</li>
+              <li>REST API</li>
+              <li>JSON</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__top">
+              <span class="project__icon" style="--hue: 160">LM</span>
+              <span class="project__tag">Property / Maps</span>
+            </div>
+            <h3 class="project__title">LandMarket</h3>
+            <p class="project__desc">
+              Helps users explore land and property information through a simple, interactive interface.
+              Built responsive UI and navigation, integrated REST APIs for property data, and implemented
+              Google Maps features for location visualization.
+            </p>
+            <ul class="tech">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>Provider</li>
+              <li>REST API</li>
+              <li>Google Maps</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__top">
+              <span class="project__icon" style="--hue: 200">TP</span>
+              <span class="project__tag">Productivity</span>
+            </div>
+            <h3 class="project__title">Team Pilot</h3>
+            <p class="project__desc">
+              Team collaboration app for managing tasks and tracking activities. Implemented Provider state
+              management and dynamic data handling for activity tracking, with REST APIs and push
+              notifications for real-time updates.
+            </p>
+            <ul class="tech">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>Provider</li>
+              <li>REST API</li>
+              <li>Push Notifications</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__top">
+              <span class="project__icon" style="--hue: 30">SC</span>
+              <span class="project__tag">Education / Jobs</span>
+            </div>
+            <h3 class="project__title">SchApp</h3>
+            <p class="project__desc">
+              School-focused mobile app for searching and applying to school-related jobs, with a simple
+              and responsive interface. Integrated REST APIs and Provider state management.
+            </p>
+            <ul class="tech">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>Provider</li>
+              <li>REST API</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__top">
+              <span class="project__icon" style="--hue: 340">BN</span>
+              <span class="project__tag">Field Operations</span>
+            </div>
+            <h3 class="project__title">BharatNet / BSNL Survey App</h3>
+            <p class="project__desc">
+              Survey app for collecting and managing field data on network infrastructure. Implemented
+              responsive UI, location-based features, data collection workflows and API integration for
+              mobile field operations.
+            </p>
+            <ul class="tech">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>REST API</li>
+              <li>Location Services</li>
+            </ul>
+          </article>
+
+          <article class="project project--featured reveal">
+            <div class="project__top">
+              <span class="project__icon" style="--hue: 275">TR</span>
+              <span class="project__tag project__tag--accent">AR / VR · Tourism</span>
+            </div>
+            <h3 class="project__title">Trauell</h3>
+            <p class="project__desc">
+              Deep-tech AR/VR tourism app from Tiruchirappalli, transforming destination discovery through
+              immersive experiences. Worked on Flutter UI, navigation, API integration and AR/VR flows,
+              including 3D content viewing, AR interactions and immersive destination experiences.
+            </p>
+            <ul class="tech">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>AR</li>
+              <li>VR</li>
+              <li>3D/GLB Models</li>
+              <li>REST APIs</li>
+              <li>Provider</li>
+            </ul>
+            <a class="project__link" href="https://www.trauell.com/" target="_blank" rel="noopener">
+              Visit trauell.com
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE & EDUCATION ============ -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Experience</span>
+          <h2 class="section__title">Where I've worked</h2>
+        </header>
+
+        <div class="timeline">
+          <article class="job job--current reveal">
+            <div class="job__marker"></div>
+            <div class="job__card">
+              <div class="job__head">
+                <div>
+                  <h3 class="job__role">Flutter Developer</h3>
+                  <p class="job__company">Azotos Software Technology Pvt. Ltd. · Trichy, TN</p>
+                </div>
+                <span class="job__date">Nov 2024 – Present</span>
+              </div>
+              <ul class="job__list">
+                <li>Developed responsive Flutter UI screens based on UI/UX designs.</li>
+                <li>Integrated REST APIs to fetch and display dynamic data.</li>
+                <li>Implemented state management using Provider.</li>
+                <li>Worked with JSON parsing and model classes.</li>
+                <li>Implemented local storage and caching.</li>
+                <li>Built features involving API integration, maps, notifications and interactive UI.</li>
+                <li>Worked on AR/VR-related application experiences.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job__marker"></div>
+            <div class="job__card">
+              <div class="job__head">
+                <div>
+                  <h3 class="job__role">Processing Executive</h3>
+                  <p class="job__company">Trayee Business Solutions · Trichy</p>
+                </div>
+                <span class="job__date">Nov 2023 – Nov 2024</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="extra-grid">
+          <!-- Education -->
+          <article class="info-card reveal" id="education">
+            <span class="info-card__eyebrow">Education</span>
+            <div class="info-card__head">
+              <span class="skill-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 10 12 5 2 10l10 5 10-5z" />
+                  <path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5" />
+                </svg></span>
+              <div>
+                <h3>BSc in Computer Science</h3>
+                <p class="muted">Urumu Dhanalakshmi College, Tiruchirappalli</p>
+              </div>
+            </div>
+            <span class="job__date">2020 – 2023</span>
+          </article>
+
+          <!-- Web development -->
+          <article class="info-card reveal" id="web">
+            <span class="info-card__eyebrow">Additional Skills</span>
+            <div class="info-card__head">
+              <span class="skill-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg></span>
+              <div>
+                <h3>Web Development</h3>
+                <ul class="badges badges--inline">
+                  <li class="badge">HTML</li>
+                  <li class="badge">CSS</li>
+                </ul>
+              </div>
+            </div>
+            <p class="muted">
+              I also have knowledge of HTML and CSS and can create responsive web layouts, structure web
+              pages, style interfaces, and convert UI designs into responsive web pages.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__info reveal">
+            <span class="section__eyebrow">Contact</span>
+            <h2 class="section__title">Let's build something together.</h2>
+            <p class="section__sub">
+              Looking for a Flutter developer for your team or project? I'd be glad to hear from you.
+            </p>
+
+            <ul class="contact__list">
+              <li>
+                <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-10 6L2 7" />
+                  </svg></span>
+                <div>
+                  <span class="contact__label">Email</span>
+                  <a href="mailto:monikaksee0911@gmail.com">monikaksee0911@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg></span>
+                <div>
+                  <span class="contact__label">Location</span>
+                  <span>Trichy, Tamil Nadu, India</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or role…"
+                required></textarea>
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">
+              Send Message
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m22 2-7 20-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+            <p class="form__status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 Monika K. All rights reserved.</p>
+      <a href="#home" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
