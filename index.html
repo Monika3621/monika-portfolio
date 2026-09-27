@@ -6,95 +6,236 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Monika K — Flutter Developer</title>
   <meta name="description"
-    content="Monika K — Flutter Developer building mobile experiences. Turning ideas, APIs and UI designs into real-world Flutter applications. Based in Trichy, Tamil Nadu, India." />
-  <meta name="theme-color" content="#05060d" />
+    content="Monika K is a Flutter Developer from Tiruchirappalli, India with 2+ years of experience building mobile apps with Flutter, Dart, Firebase, REST APIs, Google Maps and AR/VR." />
+  <meta name="author" content="Monika K" />
+  <meta name="theme-color" content="#07080b" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Monika K — Flutter Developer" />
+  <meta property="og:description" content="Turning ideas into smooth, scalable and immersive Flutter experiences." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
 
-  <!-- Apply saved theme before first paint -->
-  <script>
-    (function () {
-      var d = document.documentElement;
-      d.classList.remove('no-js');
-      d.classList.add('js');
-      try {
-        var t = localStorage.getItem('theme');
-        if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
-      } catch (e) { }
-    })();
-  </script>
-
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Boot screen (page transition in) -->
-  <div class="boot" id="boot" aria-hidden="true">
-    <div class="boot__inner">
-      <span class="boot__label">LOADING PLAYER PROFILE</span>
-      <span class="boot__bar"><span></span></span>
-      <span class="boot__id">MONIKA.K // v2026</span>
+  <!-- ============ ICON SPRITE ============ -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M8 7h9v9" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-10 6L2 7" />
+    </symbol>
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path
+        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24">
+      <rect x="9" y="9" width="13" height="13" rx="2" />
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M20 6 9 17l-5-5" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M18 6 6 18M6 6l12 12" />
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" />
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <rect x="5" y="2" width="14" height="20" rx="3" />
+      <path d="M11 18h2" />
+    </symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24">
+      <path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0zM12 17v5" />
+    </symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24">
+      <path d="M12 2c1 4 5 5.5 5 11a5 5 0 0 1-10 0c0-3 1.5-4.5 2.5-6 .5 2 1.5 3 2.5 3 0-3-1-5 0-8z" />
+    </symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M3 9h18M9 21V9" />
+    </symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24">
+      <path d="M21 16V8l-9-5-9 5v8l9 5 9-5z" />
+      <path d="M3.3 7 12 12l8.7-5M12 22V12" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="m12 2 10 5-10 5L2 7z" />
+      <path d="m2 17 10 5 10-5M2 12l10 5 10-5" />
+    </symbol>
+    <symbol id="i-route" viewBox="0 0 24 24">
+      <circle cx="6" cy="19" r="3" />
+      <circle cx="18" cy="5" r="3" />
+      <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" />
+    </symbol>
+    <symbol id="i-db" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="9" ry="3" />
+      <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3" />
+    </symbol>
+    <symbol id="i-git" viewBox="0 0 24 24">
+      <circle cx="6" cy="6" r="3" />
+      <circle cx="6" cy="18" r="3" />
+      <circle cx="18" cy="8" r="3" />
+      <path d="M6 9v6M18 11c0 4-5 3.5-9.5 6" />
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+      <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+    </symbol>
+    <symbol id="i-toggle" viewBox="0 0 24 24">
+      <rect x="2" y="7" width="20" height="10" rx="5" />
+      <circle cx="16" cy="12" r="2.5" />
+    </symbol>
+    <symbol id="i-card" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="20" height="14" rx="2" />
+      <path d="M2 10h20M6 15h4" />
+    </symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24">
+      <path
+        d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 12h10" />
+    </symbol>
+    <symbol id="i-lang" viewBox="0 0 24 24">
+      <path d="M4 5h9M8.5 3v2c0 4-2 7.5-5 9M6 9c1 2.5 3 4.5 6 5.5" />
+      <path d="m12 21 4.5-10L21 21M13.5 18h6" />
+    </symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24">
+      <rect x="9" y="2" width="6" height="12" rx="3" />
+      <path d="M19 10a7 7 0 0 1-14 0M12 17v5" />
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24">
+      <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" />
+      <path d="M19 16v5M16.5 18.5h5" />
+    </symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24">
+      <path d="m12 14 4-4" />
+      <path d="M3.3 19a10 10 0 1 1 17.4 0" />
+    </symbol>
+    <symbol id="i-vr" viewBox="0 0 24 24">
+      <path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4l-2-3h-2l-2 3H5a2 2 0 0 1-2-2z" />
+      <circle cx="8" cy="11.5" r="1.5" />
+      <circle cx="16" cy="11.5" r="1.5" />
+    </symbol>
+    <symbol id="i-orbit" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3" />
+      <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-25 12 12)" />
+    </symbol>
+    <symbol id="i-code" viewBox="0 0 24 24">
+      <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+    </symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24">
+      <path d="m4 17 6-6-6-6M12 19h8" />
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" />
+    </symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24">
+      <rect x="2" y="7" width="20" height="14" rx="2" />
+      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M2 13h20" />
+    </symbol>
+    <symbol id="i-school" viewBox="0 0 24 24">
+      <path d="M22 10 12 5 2 10l10 5z" />
+      <path d="M6 12v5c3 2 9 2 12 0v-5" />
+    </symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24">
+      <rect x="8" y="2" width="8" height="4" rx="1" />
+      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+      <path d="m9 14 2 2 4-4" />
+    </symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24">
+      <rect x="8" y="6" width="8" height="14" rx="4" />
+      <path d="M12 20v-9M3 13h5M16 13h5M4 7l4 3M20 7l-4 3M4 19l4-3M20 19l-4-3M9 6a3 3 0 0 1 6 0" />
+    </symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" />
+      <path d="m16 8-2 6-6 2 2-6z" />
+    </symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24">
+      <path d="M21 12a9 9 0 0 1-15 6.7L3 16M3 12a9 9 0 0 1 15-6.7L21 8" />
+      <path d="M21 3v5h-5M3 21v-5h5" />
+    </symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24">
+      <path d="M13 2 3 14h9l-1 8 10-12h-9z" />
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24">
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="i-flutter" viewBox="0 0 24 24">
+      <path class="fill" d="M14.3 2 4 12.3l3.2 3.2L20.7 2zM14.3 11.3 8.8 16.8l5.5 5.2h6.4l-5.5-5.3 5.5-5.4z" />
+    </symbol>
+  </svg>
+
+  <!-- ============ INTRO ============ -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <span class="intro__word">flutter run</span>
+      <span class="intro__count" id="intro-count">0</span>
     </div>
   </div>
 
   <!-- Ambient layers -->
-  <div class="bg" aria-hidden="true">
-    <div class="bg__grid"></div>
-    <div class="bg__orb bg__orb--a"></div>
-    <div class="bg__orb bg__orb--b"></div>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__glow ambient__glow--a"></div>
+    <div class="ambient__glow ambient__glow--b"></div>
+    <div class="ambient__noise"></div>
   </div>
-  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursor-label"></span></div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
 
   <!-- ============ NAVIGATION ============ -->
   <header class="nav" id="nav">
     <div class="nav__progress" id="nav-progress" aria-hidden="true"></div>
     <div class="container nav__inner">
-      <a href="#home" class="nav__logo" aria-label="Monika K — home">
-        <span class="nav__logo-bracket">[</span>MONIKA<span class="nav__logo-dot">.</span>K<span
-          class="nav__logo-bracket">]</span>
+      <a href="#home" class="logo" aria-label="Monika K — back to top">
+        <span class="logo__mark"><svg class="icon">
+            <use href="#i-flutter" />
+          </svg></span>
+        <span class="logo__text">monika<span>.dev</span></span>
       </a>
 
       <nav class="nav__menu" id="nav-menu" aria-label="Primary">
-        <ul class="nav__list">
-          <li><a class="nav__link" href="#home" data-section="home"><span class="nav__num">00</span>Home</a></li>
-          <li><a class="nav__link" href="#career" data-section="career"><span class="nav__num">01</span>Career</a></li>
-          <li><a class="nav__link" href="#skills" data-section="skills"><span class="nav__num">02</span>Skills</a></li>
-          <li><a class="nav__link" href="#projects" data-section="projects"><span class="nav__num">03</span>Projects</a>
-          </li>
-          <li><a class="nav__link" href="#profile" data-section="profile"><span class="nav__num">04</span>Profile</a>
-          </li>
-          <li><a class="nav__link" href="#contact" data-section="contact"><span class="nav__num">05</span>Contact</a>
-          </li>
+        <ul class="nav__list" id="nav-list">
+          <li><a class="nav__link" href="#home" data-section="home">Home</a></li>
+          <li><a class="nav__link" href="#about" data-section="about">About</a></li>
+          <li><a class="nav__link" href="#experience" data-section="experience">Experience</a></li>
+          <li><a class="nav__link" href="#projects" data-section="projects">Projects</a></li>
+          <li><a class="nav__link" href="#skills" data-section="skills">Skills</a></li>
+          <li><a class="nav__link" href="#contact" data-section="contact">Contact</a></li>
+          <li class="nav__pill" id="nav-pill" aria-hidden="true"></li>
         </ul>
-        <span class="nav__indicator" id="nav-indicator" aria-hidden="true"></span>
         <div class="nav__mobile-foot">
-          <span class="status"><span class="status__dot"></span>Available for opportunities</span>
+          <a class="btn btn--primary" href="#contact"><span>Let's Connect</span><svg class="icon">
+              <use href="#i-arrow" />
+            </svg></a>
         </div>
       </nav>
 
       <div class="nav__actions">
-        <span class="status status--nav"><span class="status__dot"></span>Available for opportunities</span>
-        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light mode">
-          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="4" />
-            <path
-              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-          </svg>
-          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-          </svg>
-        </button>
+        <a class="btn btn--sm btn--glass magnetic nav__cta" href="#contact"><span>Let's Connect</span></a>
         <button class="burger" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
-          aria-controls="nav-menu">
-          <span></span><span></span><span></span>
-        </button>
+          aria-controls="nav-menu"><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -104,387 +245,1285 @@
     <!-- ============ HOME ============ -->
     <section class="hero" id="home" data-nav="home">
       <div class="container hero__grid">
-        <div class="hero__intro">
-          <p class="label reveal">
-            <span class="label__pulse"></span>PLAYER PROFILE // FLUTTER DEVELOPER
+        <div class="hero__copy">
+          <p class="badge reveal" data-config-show="availability">
+            <span class="pulse"></span><span data-config="availability">Open to Flutter opportunities</span>
           </p>
-          <h1 class="hero__title reveal" style="--d:1">
-            <span class="hero__line">Hi, I'm</span>
-            <span class="hero__line hero__name">Monika K<span class="hero__dot">.</span></span>
+
+          <h1 class="hero__title">
+            <span class="sr-only">Monika K — Flutter Developer</span>
+            <span class="hero__name" aria-hidden="true" data-split>Monika K</span><span class="hero__dot"
+              aria-hidden="true">.</span>
           </h1>
-          <p class="hero__role reveal" style="--d:2">
-            <span class="hero__role-prefix">&gt;</span> Flutter Developer<span class="caret" aria-hidden="true"></span>
+
+          <p class="hero__role reveal" style="--d:3">
+            <span class="hero__role-main">Flutter Developer</span>
+            <span class="hero__role-rule" aria-hidden="true"></span>
+            <span class="hero__role-sub">2+ Years of Building Mobile Experiences</span>
           </p>
-          <p class="hero__desc reveal" style="--d:3">
-            I build responsive, user-friendly and scalable mobile applications using Flutter and Dart, with a focus
-            on clean UI, API integration and maintainable architecture.
+
+          <p class="hero__lead reveal" style="--d:4">
+            Turning ideas into <em>smooth</em>, <em>scalable</em> and <em>immersive</em> Flutter experiences —
+            from the first widget to the last API call.
           </p>
-          <div class="hero__cta reveal" style="--d:4">
-            <a href="#projects" class="btn btn--primary magnetic">
-              <span>Explore Projects</span>
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12h14M13 6l6 6-6 6" />
+
+          <div class="hero__cta reveal" style="--d:5">
+            <a href="#projects" class="btn btn--primary magnetic" data-cursor="Go">
+              <span>View Projects</span><svg class="icon">
+                <use href="#i-arrow" />
               </svg>
             </a>
-            <a href="#contact" class="btn btn--ghost magnetic"><span>Contact Me</span></a>
+            <a href="#contact" class="btn btn--ghost magnetic"><span>Let's Connect</span></a>
           </div>
-          <p class="hero__hint reveal" style="--d:5">
-            <span class="kbd">SCROLL</span> to explore the career dashboard
-          </p>
+
+          <dl class="hero__meta reveal" style="--d:6">
+            <div>
+              <dt>Based in</dt>
+              <dd>Tiruchirappalli, IN</dd>
+            </div>
+            <div>
+              <dt>Currently</dt>
+              <dd>Flutter Dev @ Azotos</dd>
+            </div>
+            <div>
+              <dt>Core stack</dt>
+              <dd>Flutter · Dart · Firebase</dd>
+            </div>
+          </dl>
         </div>
 
-        <!-- Character profile card -->
-        <div class="hero__card reveal" style="--d:2">
-          <article class="pcard tilt" aria-label="Profile summary">
-            <span class="pcard__corner pcard__corner--tl"></span>
-            <span class="pcard__corner pcard__corner--tr"></span>
-            <span class="pcard__corner pcard__corner--bl"></span>
-            <span class="pcard__corner pcard__corner--br"></span>
-            <div class="pcard__scan" aria-hidden="true"></div>
+        <!-- Live phone showcase -->
+        <div class="hero__visual reveal" style="--d:2">
+          <div class="showcase" id="showcase">
+            <div class="showcase__halo" aria-hidden="true"></div>
+            <span class="float-chip float-chip--a" aria-hidden="true"><svg class="icon">
+                <use href="#i-layers" />
+              </svg>Provider</span>
+            <span class="float-chip float-chip--b" aria-hidden="true"><svg class="icon">
+                <use href="#i-flame" />
+              </svg>Firebase</span>
+            <span class="float-chip float-chip--c" aria-hidden="true"><svg class="icon">
+                <use href="#i-plug" />
+              </svg>REST API</span>
+            <span class="float-chip float-chip--d" aria-hidden="true"><svg class="icon">
+                <use href="#i-cube" />
+              </svg>AR · 3D</span>
 
-            <header class="pcard__head">
-              <span class="mono">ID // 0x4D4B</span>
-              <span class="pcard__online"><span class="status__dot"></span>ONLINE</span>
-            </header>
+            <div class="phone" role="img"
+              aria-label="Phone mockup cycling through LandMarket, Trauell and Operator App screens">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
 
-            <div class="pcard__identity">
-              <div class="avatar" id="avatar">
-                <svg class="avatar__ring" viewBox="0 0 100 100" aria-hidden="true">
-                  <circle cx="50" cy="50" r="46" />
-                </svg>
-                <span class="avatar__initials">MK</span>
-              </div>
-              <div>
-                <h2 class="pcard__name">MONIKA K</h2>
-                <p class="pcard__level mono">LVL 02 · <span>Flutter Developer</span></p>
+                <!-- Screen: LandMarket -->
+                <div class="screen screen--land is-active" data-screen="LandMarket">
+                  <div class="m-status"><span>9:41</span><span class="m-status__icons"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="m-head">
+                    <div><small>Find land near</small><b>Tiruchirappalli</b></div>
+                    <span class="m-avatar"></span>
+                  </div>
+                  <div class="m-search"><svg class="icon">
+                      <use href="#i-scan" />
+                    </svg><span>Search plots, villas…</span></div>
+                  <div class="m-chips"><span
+                      class="on">All</span><span>Plots</span><span>Verified</span><span>Farm</span></div>
+                  <div class="m-map">
+                    <i class="m-road m-road--1"></i><i class="m-road m-road--2"></i><i class="m-road m-road--3"></i>
+                    <span class="m-pin" style="--x:24%;--y:38%"></span>
+                    <span class="m-pin m-pin--hot" style="--x:58%;--y:52%"><em>₹ 24L</em></span>
+                    <span class="m-pin" style="--x:78%;--y:28%"></span>
+                    <span class="m-you" style="--x:44%;--y:70%"></span>
+                  </div>
+                  <div class="m-prop">
+                    <span class="m-prop__img"></span>
+                    <div><b>Residential plot</b><small>2.4 km · 1,200 sq.ft</small><span class="m-verified">✓
+                        Verified</span></div>
+                  </div>
+                </div>
+
+                <!-- Screen: Trauell -->
+                <div class="screen screen--trauell" data-screen="Trauell">
+                  <div class="m-status"><span>9:41</span><span class="m-status__icons"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="m-head m-head--light">
+                    <div><small>Explore in AR</small><b>Discover</b></div>
+                    <span class="m-tag">360°</span>
+                  </div>
+                  <div class="m-ar">
+                    <span class="m-ar__corner m-ar__corner--tl"></span><span
+                      class="m-ar__corner m-ar__corner--tr"></span>
+                    <span class="m-ar__corner m-ar__corner--bl"></span><span
+                      class="m-ar__corner m-ar__corner--br"></span>
+                    <div class="m-ar__model"><i></i><i></i><i></i></div>
+                    <span class="m-ar__floor"></span>
+                    <span class="m-ar__label">model.glb · placed</span>
+                  </div>
+                  <div class="m-dest">
+                    <span style="--h:18"></span><span style="--h:280"></span><span style="--h:190"></span>
+                  </div>
+                  <div class="m-btn">View in AR</div>
+                </div>
+
+                <!-- Screen: Operator -->
+                <div class="screen screen--ops" data-screen="Operator App">
+                  <div class="m-status"><span>9:41</span><span class="m-status__icons"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="m-head">
+                    <div><small>Shift B · On duty</small><b>Dashboard</b></div>
+                    <span class="m-live">● Live</span>
+                  </div>
+                  <div class="m-ring-row">
+                    <div class="m-ring"><svg viewBox="0 0 36 36">
+                        <circle cx="18" cy="18" r="15" />
+                        <circle class="m-ring__val" cx="18" cy="18" r="15" />
+                      </svg><b>6h</b></div>
+                    <div class="m-kv"><small>Attendance</small><b>Marked</b><small>Geofence</small><b
+                        class="ok">Inside</b></div>
+                  </div>
+                  <div class="m-rows">
+                    <div class="m-row"><i class="dot ok"></i><span>Machine 04</span><em>Running</em></div>
+                    <div class="m-row"><i class="dot warn"></i><span>Machine 07</span><em>Idle</em></div>
+                    <div class="m-row"><i class="dot ok"></i><span>DGPS members</span><em>12</em></div>
+                  </div>
+                  <div class="m-btn m-btn--soft">+ Raise query</div>
+                  <div class="m-sync"><svg class="icon">
+                      <use href="#i-sync" />
+                    </svg>Synced · offline ready</div>
+                </div>
               </div>
             </div>
 
-            <dl class="pcard__stats">
-              <div class="pcard__row">
-                <dt>CLASS</dt>
-                <dd>Flutter Developer</dd>
+            <div class="showcase__caption" aria-hidden="true">
+              <span class="mono">now_showing:</span> <b id="showcase-name">LandMarket</b>
+              <span class="showcase__dots" id="showcase-dots"><i class="on"></i><i></i><i></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About">
+        <span class="scroll-cue__line"></span><span class="mono">scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Flutter</span><i>✦</i><span>Dart</span><i>✦</i><span>Firebase</span><i>✦</i><span>REST
+          API</span><i>✦</i><span>Provider</span><i>✦</i><span>GoRouter</span><i>✦</i><span>Google
+          Maps</span><i>✦</i><span>AR / VR</span><i>✦</i><span>3D · GLB</span><i>✦</i><span>ML Kit</span><i>✦</i>
+        <span>Flutter</span><i>✦</i><span>Dart</span><i>✦</i><span>Firebase</span><i>✦</i><span>REST
+          API</span><i>✦</i><span>Provider</span><i>✦</i><span>GoRouter</span><i>✦</i><span>Google
+          Maps</span><i>✦</i><span>AR / VR</span><i>✦</i><span>3D · GLB</span><i>✦</i><span>ML Kit</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats-band" aria-label="At a glance">
+      <div class="container">
+        <ul class="stats">
+          <li class="stat reveal">
+            <span class="stat__value"><span data-count="2">0</span><sup>+</sup></span>
+            <span class="stat__label">Years Experience</span>
+            <span class="stat__note">Building with Flutter &amp; Dart, every working day</span>
+          </li>
+          <li class="stat reveal" style="--d:1">
+            <span class="stat__value"><span data-count="6">0</span><sup>+</sup></span>
+            <span class="stat__label">Flutter Projects</span>
+            <span class="stat__note">Marketplace, tourism, operations &amp; business apps</span>
+          </li>
+          <li class="stat reveal" style="--d:2">
+            <span class="stat__value"><span data-count="10">0</span><sup>+</sup></span>
+            <span class="stat__label">Technologies</span>
+            <span class="stat__note">From Firebase and Maps to AR, VR and 3D</span>
+          </li>
+          <li class="stat reveal" style="--d:3">
+            <span class="stat__value"><span data-count="100">0</span><sup>%</sup></span>
+            <span class="stat__label">Passion for Building</span>
+            <span class="stat__note">The part that doesn't need a metric</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" data-nav="about">
+      <div class="container">
+        <header class="shead reveal">
+          <p class="eyebrow"><span class="eyebrow__num">01</span>About me</p>
+          <h2 class="shead__title">I build the part of the product <span class="grad">people actually touch.</span></h2>
+        </header>
+
+        <div class="about">
+          <div class="about__story reveal">
+            <p class="about__lede">
+              I'm Monika — a Flutter developer from Tiruchirappalli who has spent the last two-plus years turning
+              designs, APIs and half-formed ideas into apps that run on real phones.
+            </p>
+            <p>
+              Most of my days are spent in Flutter and Dart: wiring up REST APIs, setting up Firebase, shaping state
+              with Provider and making sure a screen still looks right on the smallest Android device in the room.
+              I like work that sits between design and engineering — the spacing has to feel right, but so does
+              what happens underneath: how data flows from an API into a model, where state should live, and whether
+              the next developer can understand a widget without scrolling through six hundred lines.
+            </p>
+            <p>
+              Lately a lot of my curiosity goes into <strong>AR, VR and 3D</strong> — placing GLB models in the real
+              world, experimenting with Unity alongside Flutter, and figuring out what immersive features look like
+              inside an everyday mobile app. I'm also steadily improving how I structure applications, because
+              clean architecture is what keeps a codebase pleasant as it grows.
+            </p>
+            <p>
+              Before Flutter, I worked in data processing and documentation. It taught me patience with detail —
+              which turns out to be very useful when you're tracing why one field in an API response is
+              <code>null</code>.
+            </p>
+          </div>
+
+          <aside class="about__side">
+            <dl class="facts reveal" style="--d:1">
+              <div class="fact"><svg class="icon">
+                  <use href="#i-pin" />
+                </svg>
+                <dt>Based in</dt>
+                <dd>Tiruchirappalli, Tamil Nadu</dd>
               </div>
-              <div class="pcard__row">
-                <dt>SPECIALTY</dt>
-                <dd>Mobile Applications</dd>
+              <div class="fact"><svg class="icon">
+                  <use href="#i-brief" />
+                </svg>
+                <dt>Experience</dt>
+                <dd>2+ years with Flutter</dd>
               </div>
-              <div class="pcard__row">
-                <dt>CURRENT QUEST</dt>
-                <dd>Building &amp; learning</dd>
+              <div class="fact"><svg class="icon">
+                  <use href="#i-school" />
+                </svg>
+                <dt>Education</dt>
+                <dd>B.Sc Computer Science</dd>
               </div>
-              <div class="pcard__row">
-                <dt>LOCATION</dt>
-                <dd>Tamil Nadu, India</dd>
+              <div class="fact"><svg class="icon">
+                  <use href="#i-compass" />
+                </svg>
+                <dt>Focus</dt>
+                <dd>Mobile apps · APIs · AR/VR</dd>
               </div>
             </dl>
 
-            <div class="pcard__xp">
-              <div class="pcard__xp-head">
-                <span class="mono">XP</span>
-                <span>1+ Year Experience</span>
-              </div>
-              <div class="xpbar" aria-hidden="true"><span></span></div>
-            </div>
-
-            <footer class="pcard__loadout">
-              <span class="mono">EQUIPPED</span>
-              <ul>
-                <li>Flutter</li>
-                <li>Dart</li>
-                <li>Provider</li>
-                <li>REST</li>
+            <div class="card-soft reveal" style="--d:2">
+              <p class="card-soft__title"><span class="pulse"></span>Currently exploring</p>
+              <ul class="tags">
+                <li>AR / VR &amp; 3D</li>
+                <li>Unity × Flutter</li>
+                <li>Cleaner app architecture</li>
+                <li>Flutter performance</li>
+                <li>Tamil speech-to-text</li>
+                <li>On-device ML</li>
               </ul>
-            </footer>
-          </article>
+            </div>
+          </aside>
         </div>
-      </div>
 
-      <!-- Quick stats -->
-      <div class="container">
-        <ul class="stats" aria-label="Quick stats">
-          <li class="stat reveal" style="--d:0">
-            <span class="stat__value"><span data-count="1" data-pad="2">00</span>+</span>
-            <span class="stat__label">Years Experience</span>
+        <ul class="values">
+          <li class="value reveal"><span class="value__num mono">/01</span>
+            <h3>Readable over clever</h3>
+            <p>Code is read far more often than it's written. I name things plainly and keep widgets small.</p>
           </li>
-          <li class="stat reveal" style="--d:1">
-            <span class="stat__value"><span data-count="6" data-pad="2">00</span></span>
-            <span class="stat__label">Featured Projects</span>
+          <li class="value reveal" style="--d:1"><span class="value__num mono">/02</span>
+            <h3>Every state, designed</h3>
+            <p>Loading, empty, error, offline — the "unhappy" screens get as much care as the happy path.</p>
           </li>
-          <li class="stat reveal" style="--d:2">
-            <span class="stat__value"><span data-scramble="Flutter">Flutter</span></span>
-            <span class="stat__label">Primary Stack</span>
+          <li class="value reveal" style="--d:2"><span class="value__num mono">/03</span>
+            <h3>Reuse before copy-paste</h3>
+            <p>If a pattern shows up twice, it becomes a component. Consistency comes for free after that.</p>
           </li>
-          <li class="stat reveal" style="--d:3">
-            <span class="stat__value"><span data-scramble="B.Sc">B.Sc</span></span>
-            <span class="stat__label">Computer Science</span>
+          <li class="value reveal" style="--d:3"><span class="value__num mono">/04</span>
+            <h3>Real devices, real conditions</h3>
+            <p>Emulators are a start. Small screens, slow networks and old phones are where apps get honest.</p>
           </li>
         </ul>
-        <p class="tagline reveal">
-          <span class="mono">//</span> Turning ideas, APIs and UI designs into real-world Flutter applications.
-        </p>
       </div>
     </section>
 
-    <!-- ============ CAREER PATH ============ -->
-    <section class="section" id="career" data-nav="career">
-      <div class="container">
-        <header class="shead reveal">
-          <p class="shead__eyebrow"><span>01</span> CAREER PATH</p>
-          <h2 class="shead__title">Career Path</h2>
-          <p class="shead__sub">How I moved from business operations into mobile development.</p>
-        </header>
-        <div class="timeline" id="timeline-wrap">
-          <span class="timeline__track" aria-hidden="true"><span class="timeline__fill"
-              id="timeline-fill"></span></span>
-          <ol class="timeline__list" id="timeline"><!-- rendered from data.js --></ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SKILL LOADOUT ============ -->
-    <section class="section" id="skills" data-nav="skills">
+    <!-- ============ WHAT I BUILD ============ -->
+    <section class="section section--alt" id="services" data-nav="about">
       <div class="container">
         <header class="shead shead--split reveal">
           <div>
-            <p class="shead__eyebrow"><span>02</span> SKILL LOADOUT</p>
-            <h2 class="shead__title">Skill Loadout</h2>
-            <p class="shead__sub">The tools and technologies I bring to every build.</p>
+            <p class="eyebrow"><span class="eyebrow__num">02</span>What I build</p>
+            <h2 class="shead__title">Six areas I work across.</h2>
           </div>
-          <div class="legend" role="group" aria-label="Filter skills by level">
-            <button class="legend__item" type="button" data-level="3" aria-pressed="false">
-              <span class="pips" data-level="3"><i></i><i></i><i></i></span>Primary
-            </button>
-            <button class="legend__item" type="button" data-level="2" aria-pressed="false">
-              <span class="pips" data-level="2"><i></i><i></i><i></i></span>Working knowledge
-            </button>
-            <button class="legend__item" type="button" data-level="1" aria-pressed="false">
-              <span class="pips" data-level="1"><i></i><i></i><i></i></span>Familiar
-            </button>
-          </div>
-        </header>
-        <div class="loadout" id="loadout"><!-- rendered from data.js --></div>
-      </div>
-    </section>
-
-    <!-- ============ PROJECT MISSIONS ============ -->
-    <section class="section" id="projects" data-nav="projects">
-      <div class="container">
-        <header class="shead reveal">
-          <p class="shead__eyebrow"><span>03</span> PROJECT MISSIONS</p>
-          <h2 class="shead__title">Project Missions</h2>
-          <p class="shead__sub">Selected applications I've worked on.</p>
+          <p class="shead__sub">From the first screen of a new app to a small feature inside a big one — this is the
+            work I
+            do day to day.</p>
         </header>
 
-        <div class="board">
-          <div class="board__log" role="list" id="mission-list"><!-- rendered from data.js --></div>
-          <aside class="board__brief" id="mission-brief" aria-live="polite"><!-- rendered from data.js --></aside>
+        <div class="services">
+          <article class="service spot reveal">
+            <span class="service__icon"><svg class="icon">
+                <use href="#i-phone" />
+              </svg></span>
+            <h3>Mobile Applications</h3>
+            <p>Production-ready Flutter applications for Android and iOS.</p>
+            <ul>
+              <li>One codebase, two platforms</li>
+              <li>Responsive across screen sizes</li>
+              <li>Structured to grow feature by feature</li>
+            </ul>
+          </article>
+          <article class="service spot reveal" style="--d:1">
+            <span class="service__icon"><svg class="icon">
+                <use href="#i-plug" />
+              </svg></span>
+            <h3>API Integration</h3>
+            <p>REST API integration, authentication, models, repositories and API-driven UI.</p>
+            <ul>
+              <li>Typed models from JSON</li>
+              <li>Clean repository layer</li>
+              <li>Loading, error &amp; retry states</li>
+            </ul>
+          </article>
+          <article class="service spot reveal" style="--d:2">
+            <span class="service__icon"><svg class="icon">
+                <use href="#i-flame" />
+              </svg></span>
+            <h3>Firebase</h3>
+            <p>Authentication, Firestore, Cloud Functions, notifications and remote configuration.</p>
+            <ul>
+              <li>Sign-in &amp; session flows</li>
+              <li>Firestore data modelling</li>
+              <li>FCM &amp; Remote Config</li>
+            </ul>
+          </article>
+          <article class="service spot reveal">
+            <span class="service__icon"><svg class="icon">
+                <use href="#i-layout" />
+              </svg></span>
+            <h3>UI/UX Implementation</h3>
+            <p>Pixel-focused responsive UI with reusable Flutter components.</p>
+            <ul>
+              <li>Design-to-widget accuracy</li>
+              <li>Shared component library</li>
+              <li>Animations &amp; micro-interactions</li>
+            </ul>
+          </article>
+          <article class="service service--accent spot reveal" style="--d:1">
+            <span class="service__icon"><svg class="icon">
+                <use href="#i-cube" />
+              </svg></span>
+            <h3>AR/VR &amp; 3D</h3>
+            <p>Experimental and application-level AR/VR experiences using Flutter, Unity and 3D models.</p>
+            <ul>
+              <li>GLB model viewing</li>
+              <li>AR placement &amp; 360° views</li>
+              <li>Unity integration experiments</li>
+            </ul>
+          </article>
+          <article class="service spot reveal" style="--d:2">
+            <span class="service__icon"><svg class="icon">
+                <use href="#i-pin" />
+              </svg></span>
+            <h3>Maps &amp; Location</h3>
+            <p>Google Maps, location services, geolocation and location-based application features.</p>
+            <ul>
+              <li>Markers &amp; map views</li>
+              <li>Live location &amp; geolocation</li>
+              <li>Geofencing checks</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ PLAYER PROFILE ============ -->
-    <section class="section" id="profile" data-nav="profile">
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience" data-nav="experience">
       <div class="container">
-        <header class="shead reveal">
-          <p class="shead__eyebrow"><span>04</span> PLAYER PROFILE</p>
-          <h2 class="shead__title">Player Profile</h2>
+        <header class="shead shead--split reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">03</span>Experience</p>
+            <h2 class="shead__title">Where I've been building.</h2>
+          </div>
+          <p class="shead__sub">A short timeline — one detour through data work, then straight into Flutter.</p>
         </header>
 
-        <div class="profile">
-          <div class="profile__main reveal">
-            <h3 class="profile__heading">Building, learning and improving — one application at a time.</h3>
-            <div class="profile__body">
-              <p>I am a Flutter Developer focused on building responsive and user-friendly mobile applications. I work
-                with Flutter and Dart, REST APIs, Firebase, Provider and local storage.</p>
-              <p>I enjoy turning UI designs into functional applications, integrating APIs and exploring new
-                technologies such as AR, VR and 3D experiences.</p>
-              <p>Along with mobile development, I also have knowledge of HTML and CSS for creating structured and
-                responsive web interfaces.</p>
+        <ol class="timeline" id="timeline">
+          <li class="timeline__track" aria-hidden="true"><span class="timeline__fill" id="timeline-fill"></span></li>
+
+          <li class="job job--current reveal">
+            <span class="job__node" aria-hidden="true"></span>
+            <div class="job__when">
+              <span class="job__period mono">2024 — Present</span>
+              <span class="chip-live"><span class="pulse"></span>Current role</span>
             </div>
-            <dl class="profile__facts">
-              <div>
-                <dt>Education</dt>
-                <dd>BSc Computer Science</dd>
-              </div>
-              <div>
-                <dt>Base</dt>
-                <dd>Trichy, Tamil Nadu</dd>
-              </div>
-              <div>
-                <dt>Experience</dt>
-                <dd>1+ year</dd>
-              </div>
-            </dl>
-          </div>
-
-          <aside class="exploring reveal" style="--d:1">
-            <p class="exploring__title"><span class="label__pulse"></span>CURRENTLY EXPLORING</p>
-            <ul class="exploring__list" id="exploring"><!-- rendered from data.js --></ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ACHIEVEMENTS ============ -->
-    <section class="section section--tight" id="achievements" data-nav="profile">
-      <div class="container">
-        <header class="shead reveal">
-          <p class="shead__eyebrow"><span>04.1</span> ACHIEVEMENTS</p>
-          <h2 class="shead__title">Achievements Unlocked</h2>
-          <p class="shead__sub">Hover or tap a badge for details.</p>
-        </header>
-        <ul class="badges" id="badges"><!-- rendered from data.js --></ul>
-      </div>
-    </section>
-
-    <!-- ============ BEYOND MOBILE ============ -->
-    <section class="section section--tight" id="beyond" data-nav="profile">
-      <div class="container beyond">
-        <div class="beyond__copy reveal">
-          <p class="shead__eyebrow"><span>04.2</span> BEYOND MOBILE</p>
-          <h2 class="beyond__title">I don't only build mobile interfaces.</h2>
-          <p class="beyond__text">I also have knowledge of HTML and CSS, allowing me to understand web structure,
-            responsive layouts and interface styling.</p>
-          <div class="beyond__chips">
-            <span class="chip chip--html">&lt;/&gt; HTML</span>
-            <span class="chip chip--css">{ } CSS</span>
-          </div>
-        </div>
-
-        <div class="browser reveal" style="--d:1">
-          <div class="browser__bar">
-            <span class="browser__dots"><i></i><i></i><i></i></span>
-            <span class="browser__url mono">index.html</span>
-            <div class="browser__toggle" role="group" aria-label="Preview width">
-              <button type="button" data-view="desktop" aria-pressed="true" aria-label="Desktop preview">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="2" y="4" width="20" height="13" rx="2" />
-                  <path d="M8 21h8M12 17v4" />
-                </svg>
-              </button>
-              <button type="button" data-view="mobile" aria-pressed="false" aria-label="Mobile preview">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="6" y="2" width="12" height="20" rx="2" />
-                  <path d="M11 18h2" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="browser__stage">
-            <div class="mini" id="mini" data-view="desktop">
-              <div class="mini__nav"><b>site</b><span></span><span></span><span></span></div>
-              <div class="mini__hero">
+            <article class="job__card spot">
+              <header class="job__head">
                 <div>
-                  <i class="mini__h"></i>
-                  <i class="mini__p"></i>
-                  <i class="mini__p mini__p--short"></i>
-                  <i class="mini__btn"></i>
+                  <h3 class="job__title">Flutter Developer</h3>
+                  <p class="job__company">Azotos Software Technologies Pvt Ltd</p>
                 </div>
-                <div class="mini__img"></div>
+                <span class="job__logo" aria-hidden="true"><svg class="icon">
+                    <use href="#i-flutter" />
+                  </svg></span>
+              </header>
+              <p class="job__summary">
+                My day-to-day is shipping Flutter features — building screens, connecting them to APIs and Firebase,
+                and fixing whatever breaks along the way — across new builds and apps that are already in
+                production.
+              </p>
+
+              <div class="job__groups">
+                <div class="job__group">
+                  <h4><svg class="icon">
+                      <use href="#i-layout" />
+                    </svg>Build</h4>
+                  <ul>
+                    <li>Develop production-ready Flutter applications</li>
+                    <li>Build reusable UI components and responsive layouts</li>
+                    <li>Add new features to existing production apps</li>
+                    <li>Work on AR/VR and 3D-related mobile experiences</li>
+                  </ul>
+                </div>
+                <div class="job__group">
+                  <h4><svg class="icon">
+                      <use href="#i-plug" />
+                    </svg>Integrate</h4>
+                  <ul>
+                    <li>Integrate REST APIs and handle API responses</li>
+                    <li>Manage app state with Provider</li>
+                    <li>Implement Firebase Auth, Firestore and Cloud Functions</li>
+                    <li>Add Google Maps and location-based features</li>
+                    <li>Set up notifications and deep linking</li>
+                  </ul>
+                </div>
+                <div class="job__group">
+                  <h4><svg class="icon">
+                      <use href="#i-bug" />
+                    </svg>Ship &amp; collaborate</h4>
+                  <ul>
+                    <li>Debug and fix UI and API integration issues</li>
+                    <li>Test features before they reach users</li>
+                    <li>Version control with Git and GitHub</li>
+                    <li>Work with developers and team members on requirements</li>
+                  </ul>
+                </div>
               </div>
-              <div class="mini__cards"><i></i><i></i><i></i></div>
+
+              <ul class="tags tags--sm">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider</li>
+                <li>REST API</li>
+                <li>Firebase</li>
+                <li>Google Maps</li>
+                <li>Deep Linking</li>
+                <li>AR/VR</li>
+                <li>Git</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="job reveal">
+            <span class="job__node" aria-hidden="true"></span>
+            <div class="job__when">
+              <span class="job__period mono">Nov 2023 — Nov 2024</span>
+              <span class="chip-muted">Before Flutter</span>
+            </div>
+            <article class="job__card job__card--compact spot">
+              <header class="job__head">
+                <div>
+                  <h3 class="job__title">Processing Executive</h3>
+                  <p class="job__company">Trayee Business Solutions</p>
+                </div>
+                <span class="job__logo job__logo--muted" aria-hidden="true"><svg class="icon">
+                    <use href="#i-clip" />
+                  </svg></span>
+              </header>
+              <p class="job__summary">
+                Data processing and documentation work where accuracy was the whole job. The habit of checking every
+                detail carried straight into how I test and debug apps today.
+              </p>
+              <ul class="tags tags--sm">
+                <li>Data Processing</li>
+                <li>Documentation</li>
+                <li>Accuracy</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section--alt" id="projects" data-nav="projects">
+      <div class="container">
+        <header class="shead shead--split reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">04</span>Featured projects</p>
+            <h2 class="shead__title">Apps I've helped bring to life.</h2>
+          </div>
+          <p class="shead__sub">Six Flutter applications across tourism, real estate, field operations and business.
+            Open
+            any card for case notes.</p>
+        </header>
+
+        <!-- Spotlight: Trauell -->
+        <article class="spotlight reveal" data-case="trauell" data-cursor="Open">
+          <div class="spotlight__bg" aria-hidden="true"></div>
+          <div class="spotlight__copy">
+            <div class="project__meta">
+              <span class="project__num mono">01</span>
+              <span class="project__cat">AR · VR · Tourism tech</span>
+              <span class="project__star">★ Most unique</span>
+            </div>
+            <h3 class="spotlight__title">Trauell</h3>
+            <p class="spotlight__tagline">Immersive tourism, in your pocket.</p>
+            <p class="spotlight__desc">
+              Trauell is an augmented and virtual reality deep-tech tourism platform from Tiruchirappalli that
+              reimagines how people discover destinations. I worked on the Flutter app that brings 3D models, 360°
+              views and immersive experiences into the everyday travel-discovery flow.
+            </p>
+            <ul class="feature-grid">
+              <li><svg class="icon">
+                  <use href="#i-cube" />
+                </svg>AR animal &amp; 3D model experiences</li>
+              <li><svg class="icon">
+                  <use href="#i-vr" />
+                </svg>VR experiences</li>
+              <li><svg class="icon">
+                  <use href="#i-orbit" />
+                </svg>360° destination views</li>
+              <li><svg class="icon">
+                  <use href="#i-eye" />
+                </svg>3D model viewing (GLB)</li>
+              <li><svg class="icon">
+                  <use href="#i-compass" />
+                </svg>Discover destinations</li>
+              <li><svg class="icon">
+                  <use href="#i-sparkle" />
+                </svg>Interactive tourism content</li>
+              <li><svg class="icon">
+                  <use href="#i-clip" />
+                </svg>Booking-related flows</li>
+              <li><svg class="icon">
+                  <use href="#i-users" />
+                </svg>Chat &amp; tourism connections</li>
+            </ul>
+            <ul class="tags tags--sm">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>AR</li>
+              <li>VR</li>
+              <li>Unity</li>
+              <li>3D Models</li>
+              <li>GLB</li>
+              <li>Provider</li>
+            </ul>
+            <div class="project__actions">
+              <button class="btn btn--primary btn--sm" type="button" data-open-case="trauell">
+                <span>Read case notes</span><svg class="icon">
+                  <use href="#i-arrow" />
+                </svg>
+              </button>
+              <a class="btn btn--ghost btn--sm" href="https://www.trauell.com/" target="_blank" rel="noopener">
+                <span>trauell.com</span><svg class="icon">
+                  <use href="#i-arrow-up" />
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="browser__code mono" aria-hidden="true">
-            <span class="c-k">.cards</span> { <span class="c-p">display</span>: grid;
-            <span class="c-p">grid-template-columns</span>: repeat(auto-fit, minmax(<span class="c-n">120px</span>,
-            1fr)); }
+
+          <div class="spotlight__visual" aria-hidden="true">
+            <div class="scene">
+              <div class="globe">
+                <i style="--r:0"></i><i style="--r:1"></i><i style="--r:2"></i><i style="--r:3"></i><i
+                  style="--r:4"></i><i style="--r:5"></i>
+                <b style="--l:0"></b><b style="--l:1"></b><b style="--l:2"></b>
+              </div>
+              <span class="scene__ring scene__ring--1"></span>
+              <span class="scene__ring scene__ring--2"></span>
+              <span class="scene__reticle"><i></i><i></i><i></i><i></i></span>
+              <span class="scene__tag scene__tag--a mono">360° · VR</span>
+              <span class="scene__tag scene__tag--b mono">model.glb</span>
+              <span class="scene__tag scene__tag--c mono">AR anchor ✓</span>
+            </div>
           </div>
+        </article>
+
+        <!-- Large cards -->
+        <div class="work-grid work-grid--2">
+          <article class="project spot reveal" data-case="landmarket" data-cursor="Open" style="--hue:158">
+            <div class="project__preview">
+              <div class="mini-phone">
+                <div class="mp-search"></div>
+                <div class="mp-map"><span style="--x:30%;--y:40%"></span><span class="hot"
+                    style="--x:62%;--y:55%"></span><span style="--x:78%;--y:30%"></span></div>
+                <div class="mp-card"><i></i>
+                  <div><b></b><b class="s"></b></div>
+                </div>
+                <div class="mp-card"><i></i>
+                  <div><b></b><b class="s"></b></div>
+                </div>
+              </div>
+              <div class="mini-panel">
+                <span class="mini-panel__label mono">filters</span>
+                <span class="mini-pill on">Verified</span><span class="mini-pill">Plot</span><span
+                  class="mini-pill">&lt; 5 km</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta"><span class="project__num mono">02</span><span class="project__cat">Real estate
+                  · Marketplace</span></div>
+              <h3 class="project__title">LandMarket</h3>
+              <p class="project__desc">A real-estate and land marketplace where buyers can search, filter and explore
+                verified properties on a map before ever visiting a site.</p>
+              <ul class="checks">
+                <li>Property listings &amp; details</li>
+                <li>Search &amp; smart filters</li>
+                <li>Verified properties</li>
+                <li>Google Maps &amp; location</li>
+                <li>Notifications</li>
+                <li>Deep links to listings</li>
+              </ul>
+              <ul class="tags tags--sm">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider</li>
+                <li>REST API</li>
+                <li>Firebase</li>
+                <li>Google Maps</li>
+              </ul>
+              <button class="link-btn" type="button" data-open-case="landmarket">Case notes<svg class="icon">
+                  <use href="#i-arrow" />
+                </svg></button>
+            </div>
+          </article>
+
+          <article class="project spot reveal" data-case="operator" data-cursor="Open" style="--hue:38;--d:1">
+            <div class="project__preview">
+              <div class="mini-phone">
+                <div class="mp-row-head"><b></b><span class="mp-live"></span></div>
+                <div class="mp-ring"></div>
+                <div class="mp-line"><i class="ok"></i><b></b></div>
+                <div class="mp-line"><i class="warn"></i><b></b></div>
+                <div class="mp-line"><i class="ok"></i><b></b></div>
+                <div class="mp-cta"></div>
+              </div>
+              <div class="mini-panel mini-panel--geo">
+                <span class="mini-panel__label mono">geofence</span>
+                <span class="geo"><i></i></span>
+                <span class="mini-pill on">Inside zone</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta"><span class="project__num mono">03</span><span class="project__cat">Field
+                  operations</span></div>
+              <h3 class="project__title">Operator App</h3>
+              <p class="project__desc">A workforce app for daily field operations — start a shift, mark attendance,
+                track machines and members, and raise issues with photo evidence, even when the network drops.</p>
+              <ul class="checks">
+                <li>Shift dashboard &amp; tracking</li>
+                <li>Attendance with geofencing</li>
+                <li>DGPS member tracking</li>
+                <li>Machine status</li>
+                <li>Queries with photo evidence</li>
+                <li>Offline data &amp; sync</li>
+              </ul>
+              <ul class="tags tags--sm">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider</li>
+                <li>REST API</li>
+                <li>GoRouter</li>
+                <li>Geolocation</li>
+                <li>Firebase</li>
+              </ul>
+              <button class="link-btn" type="button" data-open-case="operator">Case notes<svg class="icon">
+                  <use href="#i-arrow" />
+                </svg></button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Compact cards -->
+        <div class="work-grid work-grid--3">
+          <article class="project project--compact spot reveal" data-case="af" data-cursor="Open" style="--hue:218">
+            <div class="project__preview project__preview--sm">
+              <div class="mini-form"><b></b><i></i><i></i><i class="s"></i><span></span></div>
+              <div class="mini-form mini-form--back"><b></b><i></i><i class="s"></i></div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta"><span class="project__num mono">04</span><span
+                  class="project__cat">Business</span></div>
+              <h3 class="project__title">A&amp;F Venturez</h3>
+              <p class="project__desc">A business-focused mobile app with clean user flows, form-heavy screens and a
+                backend-connected experience.</p>
+              <ul class="tags tags--sm">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider</li>
+                <li>REST API</li>
+              </ul>
+              <button class="link-btn" type="button" data-open-case="af">Case notes<svg class="icon">
+                  <use href="#i-arrow" />
+                </svg></button>
+            </div>
+          </article>
+
+          <article class="project project--compact spot reveal" data-case="teampilot" data-cursor="Open"
+            style="--hue:268;--d:1">
+            <div class="project__preview project__preview--sm">
+              <div class="mini-dash">
+                <span class="mini-dash__bar" style="--v:.8"></span><span class="mini-dash__bar" style="--v:.55"></span>
+                <span class="mini-dash__bar" style="--v:.9"></span><span class="mini-dash__bar" style="--v:.4"></span>
+                <span class="mini-dash__bar" style="--v:.7"></span>
+              </div>
+              <div class="mini-avatars"><i></i><i></i><i></i><span>+4</span></div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta"><span class="project__num mono">05</span><span class="project__cat">Team
+                  management</span></div>
+              <h3 class="project__title">Team Pilot</h3>
+              <p class="project__desc">A team workflow app with a dashboard for tracking activities, tasks and who's
+                working on what.</p>
+              <ul class="tags tags--sm">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider</li>
+                <li>REST API</li>
+              </ul>
+              <button class="link-btn" type="button" data-open-case="teampilot">Case notes<svg class="icon">
+                  <use href="#i-arrow" />
+                </svg></button>
+            </div>
+          </article>
+
+          <article class="project project--compact spot reveal" data-case="schapp" data-cursor="Open"
+            style="--hue:330;--d:2">
+            <div class="project__preview project__preview--sm">
+              <div class="mini-list">
+                <div><i></i><b></b><em></em></div>
+                <div><i></i><b></b><em></em></div>
+                <div><i></i><b></b><em></em></div>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta"><span class="project__num mono">06</span><span class="project__cat">Education ·
+                  Jobs</span></div>
+              <h3 class="project__title">Schapp</h3>
+              <p class="project__desc">A mobile-first, school-focused app with authenticated user flows, including
+                searching and applying for jobs.</p>
+              <ul class="tags tags--sm">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider</li>
+                <li>REST API</li>
+              </ul>
+              <button class="link-btn" type="button" data-open-case="schapp">Case notes<svg class="icon">
+                  <use href="#i-arrow" />
+                </svg></button>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ CURRENT QUEST ============ -->
-    <section class="section section--tight" id="quest" data-nav="profile">
+    <!-- ============ EXPERIMENTS ============ -->
+    <section class="section" id="experiments" data-nav="projects">
       <div class="container">
-        <div class="quest reveal">
-          <div class="quest__head">
-            <p class="shead__eyebrow"><span>04.3</span> CURRENT QUEST</p>
-            <h2 class="quest__title">Keep learning.<br /><span>Keep building.</span></h2>
-            <p class="quest__meta mono" id="quest-meta"></p>
+        <header class="shead shead--split reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">05</span>Experiments &amp; exploration</p>
+            <h2 class="shead__title">The sandbox.</h2>
           </div>
-          <ul class="objectives" id="objectives"><!-- rendered from data.js --></ul>
+          <p class="shead__sub">Not everything here is a shipped product. These are the technical explorations I use to
+            learn how something works before it ever needs to go into a real app.</p>
+        </header>
+
+        <div class="lab-filter reveal" role="group" aria-label="Filter experiments">
+          <button type="button" class="lab-filter__btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="lab-filter__btn" data-filter="immersive" aria-pressed="false">Immersive</button>
+          <button type="button" class="lab-filter__btn" data-filter="ml" aria-pressed="false">On-device ML</button>
+          <button type="button" class="lab-filter__btn" data-filter="services" aria-pressed="false">Services</button>
+          <button type="button" class="lab-filter__btn" data-filter="craft" aria-pressed="false">Craft</button>
+        </div>
+
+        <ul class="lab" id="lab">
+          <li class="exp spot reveal" data-group="immersive"><span class="exp__icon"><svg class="icon">
+                <use href="#i-cube" />
+              </svg></span>
+            <h3>Flutter AR</h3>
+            <p>Placing and inspecting 3D objects in real space from inside a Flutter app.</p><span
+              class="exp__tag mono">immersive</span>
+          </li>
+          <li class="exp spot reveal" data-group="immersive"><span class="exp__icon"><svg class="icon">
+                <use href="#i-orbit" />
+              </svg></span>
+            <h3>Unity integration</h3>
+            <p>Running Unity scenes alongside Flutter and passing messages between the two.</p><span
+              class="exp__tag mono">immersive</span>
+          </li>
+          <li class="exp spot reveal" data-group="immersive"><span class="exp__icon"><svg class="icon">
+                <use href="#i-eye" />
+              </svg></span>
+            <h3>3D GLB models</h3>
+            <p>Loading, framing and interacting with GLB assets — and keeping them light enough for mobile.</p><span
+              class="exp__tag mono">immersive</span>
+          </li>
+          <li class="exp spot reveal" data-group="ml"><span class="exp__icon"><svg class="icon">
+                <use href="#i-scan" />
+              </svg></span>
+            <h3>ML Kit</h3>
+            <p>Trying on-device ML Kit APIs to see what can run without a server round-trip.</p><span
+              class="exp__tag mono">on-device ml</span>
+          </li>
+          <li class="exp spot reveal" data-group="ml"><span class="exp__icon"><svg class="icon">
+                <use href="#i-lang" />
+              </svg></span>
+            <h3>Offline translation</h3>
+            <p>Concepts for translating text without a network connection using on-device models.</p><span
+              class="exp__tag mono">on-device ml</span>
+          </li>
+          <li class="exp spot reveal" data-group="ml"><span class="exp__icon"><svg class="icon">
+                <use href="#i-mic" />
+              </svg></span>
+            <h3>Tamil speech-to-text</h3>
+            <p>Exploring Tamil voice input to make apps friendlier for local-language users.</p><span
+              class="exp__tag mono">on-device ml</span>
+          </li>
+          <li class="exp spot reveal" data-group="services"><span class="exp__icon"><svg class="icon">
+                <use href="#i-pin" />
+              </svg></span>
+            <h3>Google Maps</h3>
+            <p>Custom markers, camera movement and map interactions beyond the default pin.</p><span
+              class="exp__tag mono">services</span>
+          </li>
+          <li class="exp spot reveal" data-group="services"><span class="exp__icon"><svg class="icon">
+                <use href="#i-toggle" />
+              </svg></span>
+            <h3>Remote Config</h3>
+            <p>Changing content and switching features on or off without shipping a new build.</p><span
+              class="exp__tag mono">services</span>
+          </li>
+          <li class="exp spot reveal" data-group="services"><span class="exp__icon"><svg class="icon">
+                <use href="#i-bell" />
+              </svg></span>
+            <h3>Push notifications</h3>
+            <p>Foreground, background and tap-to-open handling that lands on the right screen.</p><span
+              class="exp__tag mono">services</span>
+          </li>
+          <li class="exp spot reveal" data-group="services"><span class="exp__icon"><svg class="icon">
+                <use href="#i-card" />
+              </svg></span>
+            <h3>Payment gateways</h3>
+            <p>Checkout flows and handling success, failure and cancelled-payment callbacks cleanly.</p><span
+              class="exp__tag mono">services</span>
+          </li>
+          <li class="exp spot reveal" data-group="craft"><span class="exp__icon"><svg class="icon">
+                <use href="#i-sparkle" />
+              </svg></span>
+            <h3>Flutter animations</h3>
+            <p>Implicit and explicit animations, Hero transitions and small details that make UI feel alive.</p><span
+              class="exp__tag mono">craft</span>
+          </li>
+          <li class="exp spot reveal" data-group="craft"><span class="exp__icon"><svg class="icon">
+                <use href="#i-gauge" />
+              </svg></span>
+            <h3>DevTools &amp; performance</h3>
+            <p>Profiling rebuilds, hunting jank and learning where <code>const</code> actually matters.</p><span
+              class="exp__tag mono">craft</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills" data-nav="skills">
+      <div class="container">
+        <header class="shead shead--split reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">06</span>Skills &amp; tools</p>
+            <h2 class="shead__title">The toolbox, <span class="grad">organised.</span></h2>
+          </div>
+          <p class="shead__sub">22 tools grouped by what they're for. Flutter and Dart sit at the centre — everything
+            else plugs into them.</p>
+        </header>
+
+        <div class="skills">
+          <article class="sgroup sgroup--core spot reveal">
+            <header><span class="sgroup__icon"><svg class="icon">
+                  <use href="#i-flutter" />
+                </svg></span>
+              <h3>Core</h3><span class="sgroup__count mono">02</span>
+            </header>
+            <p>The language and framework behind every app I build — widgets, layouts, async and null safety.</p>
+            <pre class="wtree mono" aria-label="Example Flutter widget tree"><b>MaterialApp.router</b>
+└─ <b>Scaffold</b>
+   ├─ <b>AppBar</b>
+   └─ <b>Column</b>
+      ├─ <b>SearchField</b>
+      └─ <b>Expanded</b>
+         └─ <b>ListView.builder</b>
+            └─ <b>PropertyCard</b></pre>
+            <ul class="skill-list skill-list--big">
+              <li>Flutter</li>
+              <li>Dart</li>
+            </ul>
+          </article>
+          <article class="sgroup spot reveal" style="--d:1">
+            <header><span class="sgroup__icon"><svg class="icon">
+                  <use href="#i-layers" />
+                </svg></span>
+              <h3>State &amp; Navigation</h3><span class="sgroup__count mono">02</span>
+            </header>
+            <p>Predictable state and structured routing, including deep links.</p>
+            <ul class="skill-list">
+              <li>Provider</li>
+              <li>GoRouter</li>
+            </ul>
+          </article>
+          <article class="sgroup spot reveal" style="--d:2">
+            <header><span class="sgroup__icon"><svg class="icon">
+                  <use href="#i-flame" />
+                </svg></span>
+              <h3>Firebase</h3><span class="sgroup__count mono">06</span>
+            </header>
+            <p>Backend services for auth, data, server logic and engagement.</p>
+            <ul class="skill-list">
+              <li>Firebase</li>
+              <li>Firebase Authentication</li>
+              <li>Cloud Firestore</li>
+              <li>Cloud Functions</li>
+              <li>Push Notifications</li>
+              <li>Remote Config</li>
+            </ul>
+          </article>
+          <article class="sgroup spot reveal">
+            <header><span class="sgroup__icon"><svg class="icon">
+                  <use href="#i-db" />
+                </svg></span>
+              <h3>Data &amp; APIs</h3><span class="sgroup__count mono">03</span>
+            </header>
+            <p>Talking to servers and keeping data on the device.</p>
+            <ul class="skill-list">
+              <li>REST API</li>
+              <li>SQLite</li>
+              <li>SharedPreferences</li>
+            </ul>
+          </article>
+          <article class="sgroup spot reveal" style="--d:1">
+            <header><span class="sgroup__icon"><svg class="icon">
+                  <use href="#i-pin" />
+                </svg></span>
+              <h3>Maps &amp; Integrations</h3><span class="sgroup__count mono">04</span>
+            </header>
+            <p>Third-party SDKs that turn an app into a product.</p>
+            <ul class="skill-list">
+              <li>Google Maps</li>
+              <li>Location Services</li>
+              <li>Payment Gateway Integration</li>
+              <li>ML Kit</li>
+            </ul>
+          </article>
+          <article class="sgroup sgroup--immersive spot reveal" style="--d:2">
+            <header><span class="sgroup__icon"><svg class="icon">
+                  <use href="#i-vr" />
+                </svg></span>
+              <h3>Immersive</h3><span class="sgroup__count mono">02</span>
+            </header>
+            <p>AR/VR experiences and 3D content inside mobile apps.</p>
+            <ul class="skill-list">
+              <li>AR/VR</li>
+              <li>3D Model Integration</li>
+            </ul>
+          </article>
+          <article class="sgroup sgroup--wide spot reveal">
+            <header><span class="sgroup__icon"><svg class="icon">
+                  <use href="#i-terminal" />
+                </svg></span>
+              <h3>Workflow &amp; Tools</h3><span class="sgroup__count mono">04</span>
+            </header>
+            <p>Where the code gets written, tested against APIs and versioned.</p>
+            <ul class="skill-list">
+              <li>Git &amp; GitHub</li>
+              <li>Postman</li>
+              <li>Android Studio</li>
+              <li>VS Code</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ START A PROJECT ============ -->
-    <section class="section" id="contact" data-nav="contact">
+    <!-- ============ APPROACH ============ -->
+    <section class="section" id="approach" data-nav="skills">
+      <div class="container">
+        <header class="shead shead--split reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">07</span>Development approach</p>
+            <h2 class="shead__title">How an idea becomes an app.</h2>
+          </div>
+          <p class="shead__sub">Five steps I follow on almost every feature — big or small.</p>
+        </header>
+
+        <ol class="steps" id="steps">
+          <li class="steps__line" aria-hidden="true"><span id="steps-fill"></span></li>
+          <li class="step reveal"><span class="step__num">01</span>
+            <h3>Understand</h3>
+            <p>Understand the requirement and user flow.</p><small>Clarify screens, states and API contracts before
+              writing code.</small>
+          </li>
+          <li class="step reveal" style="--d:1"><span class="step__num">02</span>
+            <h3>Design</h3>
+            <p>Create a clean and practical mobile UI.</p><small>Break the design into reusable widgets and spacing
+              rules.</small>
+          </li>
+          <li class="step reveal" style="--d:2"><span class="step__num">03</span>
+            <h3>Develop</h3>
+            <p>Build the application using Flutter and reusable components.</p><small>Keep UI, state and data layers
+              separate.</small>
+          </li>
+          <li class="step reveal" style="--d:3"><span class="step__num">04</span>
+            <h3>Integrate</h3>
+            <p>Connect APIs, Firebase, maps and required third-party services.</p><small>Handle loading, empty and error
+              states for every call.</small>
+          </li>
+          <li class="step reveal" style="--d:4"><span class="step__num">05</span>
+            <h3>Test &amp; Improve</h3>
+            <p>Debug, optimize and improve the application experience.</p><small>Test on real devices, profile with
+              DevTools, iterate.</small>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CRAFT / CODE ============ -->
+    <section class="section section--alt" id="craft" data-nav="skills">
+      <div class="container craft">
+        <div class="craft__copy reveal">
+          <p class="eyebrow"><span class="eyebrow__num">08</span>How I write Flutter</p>
+          <h2 class="shead__title">Clean layers.<br /><span class="grad">Calm widgets.</span></h2>
+          <p class="craft__text">Most bugs I've fixed came from things being in the wrong place — network calls inside
+            widgets, state that nobody owns, screens that forget about errors. So I keep the layers simple:</p>
+          <ul class="craft__list">
+            <li><span class="mono">repository</span> talks to the API and returns typed models.</li>
+            <li><span class="mono">provider</span> owns the state and decides what the screen should show.</li>
+            <li><span class="mono">widget</span> just renders — loading, empty, error or data.</li>
+          </ul>
+          <p class="craft__note mono">// illustrative example, written for this page</p>
+        </div>
+
+        <div class="editor reveal" style="--d:1">
+          <div class="editor__bar">
+            <span class="editor__dots"><i></i><i></i><i></i></span>
+            <div class="editor__tabs" role="tablist" aria-label="Code example files">
+              <button role="tab" type="button" class="editor__tab is-active" aria-selected="true"
+                data-tab="0">property_repository.dart</button>
+              <button role="tab" type="button" class="editor__tab" aria-selected="false"
+                data-tab="1">property_provider.dart</button>
+              <button role="tab" type="button" class="editor__tab" aria-selected="false"
+                data-tab="2">property_list.dart</button>
+            </div>
+          </div>
+          <div class="editor__body">
+            <pre class="code is-active" data-pane="0"><code>class PropertyRepository {
+  PropertyRepository(this._api);
+  final ApiClient _api;
+
+  // One place that knows the endpoint and the JSON shape.
+  Future&lt;List&lt;Property&gt;&gt; fetch({PropertyFilter? filter}) async {
+    final res = await _api.get('/properties', query: filter?.toQuery());
+    return (res['data'] as List)
+        .map((json) =&gt; Property.fromJson(json))
+        .toList();
+  }
+}</code></pre>
+            <pre class="code" data-pane="1" hidden><code>enum ViewState { idle, loading, ready, empty, error }
+
+class PropertyProvider extends ChangeNotifier {
+  PropertyProvider(this._repo);
+  final PropertyRepository _repo;
+
+  List&lt;Property&gt; items = [];
+  ViewState state = ViewState.idle;
+  String? error;
+
+  Future&lt;void&gt; load({PropertyFilter? filter}) async {
+    state = ViewState.loading;
+    notifyListeners();
+    try {
+      items = await _repo.fetch(filter: filter);
+      state = items.isEmpty ? ViewState.empty : ViewState.ready;
+    } on ApiException catch (e) {
+      error = e.message;
+      state = ViewState.error;
+    }
+    notifyListeners();
+  }
+}</code></pre>
+            <pre class="code" data-pane="2" hidden><code>class PropertyList extends StatelessWidget {
+  const PropertyList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final provider = context.watch&lt;PropertyProvider&gt;();
+
+    // Every state gets a screen — not just the happy path.
+    return switch (provider.state) {
+      ViewState.loading =&gt; const ListSkeleton(),
+      ViewState.empty =&gt; const EmptyState('No properties found'),
+      ViewState.error =&gt; ErrorState(onRetry: provider.load),
+      _ =&gt; ListView.separated(
+          itemCount: provider.items.length,
+          separatorBuilder: (_, __) =&gt; const SizedBox(height: 12),
+          itemBuilder: (_, i) =&gt; PropertyCard(provider.items[i]),
+        ),
+    };
+  }
+}</code></pre>
+          </div>
+          <div class="editor__status mono">
+            <span><svg class="icon">
+                <use href="#i-zap" />
+              </svg>Hot reload ready</span>
+            <span>Dart · UTF-8</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq" data-nav="contact">
+      <div class="container faq-wrap">
+        <header class="shead reveal">
+          <p class="eyebrow"><span class="eyebrow__num">09</span>Quick answers</p>
+          <h2 class="shead__title">Things people usually ask.</h2>
+        </header>
+
+        <div class="faq">
+          <details class="qa reveal">
+            <summary>What kind of apps do you build?<span class="qa__icon"><svg class="icon">
+                  <use href="#i-plus" />
+                </svg></span></summary>
+            <div class="qa__body">
+              <p>Cross-platform Flutter apps for Android and iOS — marketplaces, field-operations tools,
+                team and business apps, and immersive AR/VR experiences like Trauell.</p>
+            </div>
+          </details>
+          <details class="qa reveal">
+            <summary>Can you work on an existing Flutter codebase?<span class="qa__icon"><svg class="icon">
+                  <use href="#i-plus" />
+                </svg></span></summary>
+            <div class="qa__body">
+              <p>Yes. A good part of my work has been adding features to apps that were already in
+                production — reading the existing code first, following its patterns, and improving things carefully
+                rather than rewriting them.</p>
+            </div>
+          </details>
+          <details class="qa reveal">
+            <summary>Do you handle the backend as well?<span class="qa__icon"><svg class="icon">
+                  <use href="#i-plus" />
+                </svg></span></summary>
+            <div class="qa__body">
+              <p>My focus is the app, but I'm comfortable on the Firebase side — Authentication,
+                Firestore, Cloud Functions, push notifications and Remote Config — and I work closely with backend
+                developers on REST APIs, testing endpoints in Postman before they hit the UI.</p>
+            </div>
+          </details>
+          <details class="qa reveal">
+            <summary>Which state management do you use?<span class="qa__icon"><svg class="icon">
+                  <use href="#i-plus" />
+                </svg></span></summary>
+            <div class="qa__body">
+              <p>Mainly Provider, with GoRouter for navigation and deep links. I care more about state
+                being predictable and living in the right place than about which package is currently popular.</p>
+            </div>
+          </details>
+          <details class="qa reveal">
+            <summary>What are you learning right now?<span class="qa__icon"><svg class="icon">
+                  <use href="#i-plus" />
+                </svg></span></summary>
+            <div class="qa__body">
+              <p>AR/VR and 3D (GLB models and Unity with Flutter), on-device ML Kit, Tamil
+                speech-to-text, and getting better at app architecture and performance profiling with DevTools.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact-section" id="contact" data-nav="contact">
       <div class="container">
         <div class="contact">
+          <div class="contact__glow" aria-hidden="true"></div>
           <div class="contact__intro reveal">
-            <p class="shead__eyebrow"><span>05</span> START A PROJECT</p>
-            <h2 class="contact__title">Start a Project</h2>
-            <p class="contact__text">Have an idea, application or product in mind?<br />Let's build something useful.
-            </p>
+            <p class="eyebrow"><span class="eyebrow__num">10</span>Contact</p>
+            <h2 class="contact__title">Let's build something <span class="grad">together.</span></h2>
+            <p class="contact__text">Hiring for a Flutter role, planning a mobile app, or curious about AR in an
+              everyday
+              app? Send a message — I'd be glad to hear what you're working on.</p>
 
-            <dl class="contact__info">
-              <div>
-                <dt class="mono">EMAIL</dt>
-                <dd><a href="mailto:monikaksee0911@gmail.com" data-link="email">monikaksee0911@gmail.com</a></dd>
-              </div>
-              <div>
-                <dt class="mono">LOCATION</dt>
-                <dd>Trichy, Tamil Nadu, India</dd>
-              </div>
-            </dl>
+            <div class="email-card">
+              <span class="mono email-card__label">email</span>
+              <a class="email-card__addr" href="mailto:monikaksee0911@gmail.com"
+                data-config="email">monikaksee0911@gmail.com</a>
+              <button class="icon-btn" type="button" id="copy-email" aria-label="Copy email address">
+                <svg class="icon icon--copy">
+                  <use href="#i-copy" />
+                </svg><svg class="icon icon--done">
+                  <use href="#i-check" />
+                </svg>
+              </button>
+            </div>
 
             <div class="contact__links">
-              <a class="btn btn--primary magnetic" href="mailto:monikaksee0911@gmail.com" data-link="email">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="m22 7-10 6L2 7" />
-                </svg>
-                <span>Send Email</span>
-              </a>
-              <a class="btn btn--ghost magnetic" href="https://www.linkedin.com/" target="_blank" rel="noopener"
-                data-link="linkedin">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
-                </svg>
-                <span>LinkedIn</span>
+              <a class="btn btn--primary magnetic" href="mailto:monikaksee0911@gmail.com" data-config="email-link">
+                <svg class="icon">
+                  <use href="#i-mail" />
+                </svg><span>Send an email</span>
               </a>
               <a class="btn btn--ghost magnetic" href="https://github.com/" target="_blank" rel="noopener"
-                data-link="github">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                  <path d="M9 18c-4.51 2-5-2-7-2" />
-                </svg>
-                <span>GitHub</span>
+                data-config="github">
+                <svg class="icon">
+                  <use href="#i-github" />
+                </svg><span>GitHub</span>
               </a>
             </div>
+
+            <p class="contact__loc"><svg class="icon">
+                <use href="#i-pin" />
+              </svg>Tiruchirappalli, Tamil Nadu, India · IST (UTC+5:30)</p>
           </div>
 
           <form class="cform reveal" id="contact-form" style="--d:1" novalidate>
-            <div class="cform__head mono">
-              <span>NEW_TRANSMISSION.msg</span>
-              <span class="cform__dots"><i></i><i></i><i></i></span>
+            <p class="cform__title">Quick message</p>
+            <div class="cform__row">
+              <div class="field">
+                <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder=" " />
+                <label for="cf-name">Your name</label>
+              </div>
+              <div class="field">
+                <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder=" " />
+                <label for="cf-email">Your email</label>
+              </div>
             </div>
+            <fieldset class="topics">
+              <legend>I'm reaching out about</legend>
+              <label><input type="radio" name="topic" value="A Flutter role" checked /><span>A Flutter
+                  role</span></label>
+              <label><input type="radio" name="topic" value="A mobile app project" /><span>An app project</span></label>
+              <label><input type="radio" name="topic" value="AR/VR or 3D" /><span>AR / VR / 3D</span></label>
+              <label><input type="radio" name="topic" value="Just saying hi" /><span>Just saying hi</span></label>
+            </fieldset>
             <div class="field">
-              <label for="cf-name">Name</label>
-              <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
-            </div>
-            <div class="field">
-              <label for="cf-email">Email</label>
-              <input id="cf-email" name="email" type="email" autocomplete="email" required
-                placeholder="you@example.com" />
-            </div>
-            <div class="field">
-              <label for="cf-message">Message</label>
-              <textarea id="cf-message" name="message" rows="5" required
-                placeholder="Tell me about your idea…"></textarea>
+              <textarea id="cf-message" name="message" rows="5" required placeholder=" "></textarea>
+              <label for="cf-message">Tell me a bit about it</label>
             </div>
             <button type="submit" class="btn btn--primary btn--block magnetic">
-              <span>Send Message</span>
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m22 2-7 20-4-9-9-4Z" />
-                <path d="M22 2 11 13" />
+              <span>Send message</span><svg class="icon">
+                <use href="#i-arrow" />
               </svg>
             </button>
             <p class="cform__status mono" id="form-status" role="status"></p>
+            <p class="cform__hint">This opens your email app with the message ready to send.</p>
           </form>
         </div>
       </div>
@@ -493,37 +1532,278 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <p class="footer__logo">MONIKA<span>.</span>K</p>
-        <p class="footer__role mono">Flutter Developer</p>
+    <div class="container">
+      <p class="footer__big" aria-hidden="true">Monika K<span>.</span></p>
+      <div class="footer__grid">
+        <div>
+          <p class="footer__role">Flutter Developer · Tiruchirappalli, India</p>
+          <p class="footer__line">Designed and built by hand — no templates, just HTML, CSS and a little JavaScript.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer__nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <ul class="footer__social">
+          <li><a href="mailto:monikaksee0911@gmail.com" data-config="email-link" aria-label="Email"><svg class="icon">
+                <use href="#i-mail" />
+              </svg></a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener" data-config="github" aria-label="GitHub"><svg
+                class="icon">
+                <use href="#i-github" />
+              </svg></a></li>
+        </ul>
       </div>
-      <p class="footer__thanks">"Thanks for exploring my profile."</p>
-      <div class="footer__end">
-        <a href="#home" class="footer__top mono">Back to top ↑</a>
-        <p class="mono">© 2026 Monika K</p>
+      <div class="footer__bottom mono">
+        <span>© <span id="year">2026</span> Monika K</span>
+        <span class="footer__tip">tip: press <kbd>R</kbd> for a hot reload</span>
+        <a href="#home">Back to top ↑</a>
       </div>
     </div>
   </footer>
 
-  <!-- ============ PROJECT DETAIL PANEL ============ -->
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ CASE NOTES MODAL ============ -->
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
     <div class="modal__backdrop" data-close></div>
     <div class="modal__panel" tabindex="-1">
-      <div class="modal__top">
-        <button class="btn btn--ghost btn--sm" type="button" data-close>
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M19 12H5M11 18l-6-6 6-6" />
-          </svg>
-          <span>Back to missions</span>
-        </button>
-        <span class="mono modal__crumb" id="modal-crumb"></span>
-      </div>
-      <div class="modal__content" id="modal-content"><!-- rendered by main.js --></div>
+      <button class="icon-btn modal__close" type="button" data-close aria-label="Close case notes"><svg class="icon">
+          <use href="#i-close" />
+        </svg></button>
+      <div class="modal__content" id="modal-content"></div>
     </div>
   </div>
 
-  <script src="js/data.js"></script>
+  <!-- ============ CASE NOTES CONTENT ============ -->
+  <template id="case-trauell">
+    <p class="case__cat">AR · VR · Tourism tech</p>
+    <h2 class="case__title" id="modal-title">Trauell</h2>
+    <p class="case__lede">An AR &amp; VR deep-tech tourism platform based in Tiruchirappalli, focused on transforming
+      how people discover and experience destinations.</p>
+    <div class="case__cols">
+      <div>
+        <h3>Overview</h3>
+        <p>Trauell combines regular travel-app flows — discovering places, exploring content, booking-related steps and
+          chat — with immersive features like AR 3D models, VR and 360° destination views. The goal is to let people
+          experience a place before they go.</p>
+        <h3>What I worked on</h3>
+        <ul>
+          <li>Flutter UI and navigation across discovery, detail and booking-related screens</li>
+          <li>Integrating AR/VR flows and 3D/GLB model viewing into the app experience</li>
+          <li>AR/VR experimentation, including Unity alongside Flutter</li>
+          <li>Interactive content, chat and tourism-connection screens</li>
+          <li>Provider-based state and API integration across the app</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Things I paid attention to</h3>
+        <ul>
+          <li>3D content is heavy — loading states and fallbacks matter so the app never feels frozen.</li>
+          <li>Moving between normal screens and immersive views has to feel like one app, not two.</li>
+          <li>Keeping the modern UI consistent with reusable components.</li>
+        </ul>
+        <h3>Stack</h3>
+        <ul class="tags tags--sm">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>AR</li>
+          <li>VR</li>
+          <li>Unity</li>
+          <li>3D Models</li>
+          <li>GLB</li>
+          <li>Provider</li>
+        </ul>
+        <a class="btn btn--ghost btn--sm case__link" href="https://www.trauell.com/" target="_blank"
+          rel="noopener"><span>Visit trauell.com</span><svg class="icon">
+            <use href="#i-arrow-up" />
+          </svg></a>
+      </div>
+    </div>
+  </template>
+
+  <template id="case-landmarket">
+    <p class="case__cat">Real estate · Marketplace</p>
+    <h2 class="case__title" id="modal-title">LandMarket</h2>
+    <p class="case__lede">A Flutter-based real-estate and land marketplace for finding, filtering and exploring
+      properties and related services.</p>
+    <div class="case__cols">
+      <div>
+        <h3>Overview</h3>
+        <p>LandMarket brings property listings, search and maps together so users can see what's available, where it
+          is, and whether it's verified — all in one place.</p>
+        <h3>What I worked on</h3>
+        <ul>
+          <li>Listing, search and filter screens connected to REST APIs</li>
+          <li>Google Maps integration with property locations and location-based features</li>
+          <li>Property detail pages built from reusable components</li>
+          <li>Notifications and deep links that open a specific property</li>
+          <li>Provider for listing, search and filter state</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Key features</h3>
+        <ul class="checks checks--col">
+          <li>Property listings</li>
+          <li>Property &amp; service search</li>
+          <li>Filters</li>
+          <li>Verified properties</li>
+          <li>Google Maps</li>
+          <li>Location-based results</li>
+          <li>Property details</li>
+          <li>Notifications</li>
+          <li>Deep linking</li>
+          <li>API integration</li>
+          <li>Responsive UI</li>
+        </ul>
+        <h3>Stack</h3>
+        <ul class="tags tags--sm">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>Provider</li>
+          <li>REST API</li>
+          <li>Firebase</li>
+          <li>Google Maps</li>
+        </ul>
+      </div>
+    </div>
+  </template>
+
+  <template id="case-operator">
+    <p class="case__cat">Field operations</p>
+    <h2 class="case__title" id="modal-title">Operator App</h2>
+    <p class="case__lede">A field and operator management app built around daily operational workflows — shifts,
+      attendance, machines, members and on-site queries.</p>
+    <div class="case__cols">
+      <div>
+        <h3>Overview</h3>
+        <p>Operators use the app throughout a shift: logging in, marking attendance inside a geofenced area, checking
+          machine status, tracking DGPS members and raising queries with photo evidence. Field connectivity isn't
+          always reliable, so local data handling and sync are part of the core design.</p>
+        <h3>What I worked on</h3>
+        <ul>
+          <li>Login, authentication and the shift dashboard</li>
+          <li>Attendance marking with location and geofencing checks</li>
+          <li>Machine status, shift tracking and DGPS member tracking screens</li>
+          <li>Raise-query flow with categories and photo evidence</li>
+          <li>Local data handling and synchronization with the backend</li>
+          <li>Navigation structured with GoRouter</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Things I paid attention to</h3>
+        <ul>
+          <li>Entries shouldn't disappear when the network does — save locally, sync when possible.</li>
+          <li>Clear status at a glance: what's synced, what's pending, what needs action.</li>
+          <li>Location permissions and edge cases handled without blocking the user.</li>
+        </ul>
+        <h3>Stack</h3>
+        <ul class="tags tags--sm">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>Provider</li>
+          <li>REST API</li>
+          <li>GoRouter</li>
+          <li>Location</li>
+          <li>Geolocation</li>
+          <li>Firebase / Backend</li>
+        </ul>
+      </div>
+    </div>
+  </template>
+
+  <template id="case-af">
+    <p class="case__cat">Business</p>
+    <h2 class="case__title" id="modal-title">A&amp;F Venturez</h2>
+    <p class="case__lede">A business-focused mobile application with a modern Flutter interface connected to backend
+      services.</p>
+    <div class="case__cols">
+      <div>
+        <h3>What I worked on</h3>
+        <ul>
+          <li>Modern, responsive Flutter screens</li>
+          <li>User flows from sign-in through the core business screens</li>
+          <li>Form handling with validation and clear feedback</li>
+          <li>API and backend integration with JSON parsing</li>
+          <li>Reusable components shared across screens</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Stack</h3>
+        <ul class="tags tags--sm">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>Provider</li>
+          <li>REST API</li>
+        </ul>
+      </div>
+    </div>
+  </template>
+
+  <template id="case-teampilot">
+    <p class="case__cat">Team management</p>
+    <h2 class="case__title" id="modal-title">Team Pilot</h2>
+    <p class="case__lede">A team management app for tracking activities, tasks and team workflows from a single
+      dashboard.</p>
+    <div class="case__cols">
+      <div>
+        <h3>What I worked on</h3>
+        <ul>
+          <li>Team and user workflow screens</li>
+          <li>Modern dashboard UI for activities and tasks</li>
+          <li>Authentication and API integration</li>
+          <li>State management with Provider</li>
+          <li>Reusable widgets and a responsive mobile interface</li>
+          <li>Push notifications for team updates</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Stack</h3>
+        <ul class="tags tags--sm">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>Provider</li>
+          <li>REST API</li>
+        </ul>
+      </div>
+    </div>
+  </template>
+
+  <template id="case-schapp">
+    <p class="case__cat">Education · Jobs</p>
+    <h2 class="case__title" id="modal-title">Schapp</h2>
+    <p class="case__lede">A mobile-first, school-related Flutter application with job searching and application
+      flows.</p>
+    <div class="case__cols">
+      <div>
+        <h3>What I worked on</h3>
+        <ul>
+          <li>Mobile-first UI and user interactions</li>
+          <li>Authentication and API integration</li>
+          <li>Job search and application flows</li>
+          <li>State management with Provider</li>
+          <li>Reusable Flutter components</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Stack</h3>
+        <ul class="tags tags--sm">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>Provider</li>
+          <li>REST API</li>
+        </ul>
+      </div>
+    </div>
+  </template>
+
+  <script src="js/config.js"></script>
   <script src="js/main.js"></script>
 </body>
 

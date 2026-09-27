@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monika K — Flutter Developer</title>
+  <meta name="description"
+    content="Monika K — Flutter Developer building mobile experiences. Turning ideas, APIs and UI designs into real-world Flutter applications. Based in Trichy, Tamil Nadu, India." />
+  <meta name="theme-color" content="#05060d" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Apply saved theme before first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.remove('no-js');
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+      } catch (e) { }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Boot screen (page transition in) -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot__inner">
+      <span class="boot__label">LOADING PLAYER PROFILE</span>
+      <span class="boot__bar"><span></span></span>
+      <span class="boot__id">MONIKA.K // v2026</span>
+    </div>
+  </div>
+
+  <!-- Ambient layers -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__orb bg__orb--a"></div>
+    <div class="bg__orb bg__orb--b"></div>
+  </div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__progress" id="nav-progress" aria-hidden="true"></div>
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo" aria-label="Monika K — home">
+        <span class="nav__logo-bracket">[</span>MONIKA<span class="nav__logo-dot">.</span>K<span
+          class="nav__logo-bracket">]</span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home" data-section="home"><span class="nav__num">00</span>Home</a></li>
+          <li><a class="nav__link" href="#career" data-section="career"><span class="nav__num">01</span>Career</a></li>
+          <li><a class="nav__link" href="#skills" data-section="skills"><span class="nav__num">02</span>Skills</a></li>
+          <li><a class="nav__link" href="#projects" data-section="projects"><span class="nav__num">03</span>Projects</a>
+          </li>
+          <li><a class="nav__link" href="#profile" data-section="profile"><span class="nav__num">04</span>Profile</a>
+          </li>
+          <li><a class="nav__link" href="#contact" data-section="contact"><span class="nav__num">05</span>Contact</a>
+          </li>
+        </ul>
+        <span class="nav__indicator" id="nav-indicator" aria-hidden="true"></span>
+        <div class="nav__mobile-foot">
+          <span class="status"><span class="status__dot"></span>Available for opportunities</span>
+        </div>
+      </nav>
+
+      <div class="nav__actions">
+        <span class="status status--nav"><span class="status__dot"></span>Available for opportunities</span>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+        <button class="burger" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HOME ============ -->
+    <section class="hero" id="home" data-nav="home">
+      <div class="container hero__grid">
+        <div class="hero__intro">
+          <p class="label reveal">
+            <span class="label__pulse"></span>PLAYER PROFILE // FLUTTER DEVELOPER
+          </p>
+          <h1 class="hero__title reveal" style="--d:1">
+            <span class="hero__line">Hi, I'm</span>
+            <span class="hero__line hero__name">Monika K<span class="hero__dot">.</span></span>
+          </h1>
+          <p class="hero__role reveal" style="--d:2">
+            <span class="hero__role-prefix">&gt;</span> Flutter Developer<span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero__desc reveal" style="--d:3">
+            I build responsive, user-friendly and scalable mobile applications using Flutter and Dart, with a focus
+            on clean UI, API integration and maintainable architecture.
+          </p>
+          <div class="hero__cta reveal" style="--d:4">
+            <a href="#projects" class="btn btn--primary magnetic">
+              <span>Explore Projects</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost magnetic"><span>Contact Me</span></a>
+          </div>
+          <p class="hero__hint reveal" style="--d:5">
+            <span class="kbd">SCROLL</span> to explore the career dashboard
+          </p>
+        </div>
+
+        <!-- Character profile card -->
+        <div class="hero__card reveal" style="--d:2">
+          <article class="pcard tilt" aria-label="Profile summary">
+            <span class="pcard__corner pcard__corner--tl"></span>
+            <span class="pcard__corner pcard__corner--tr"></span>
+            <span class="pcard__corner pcard__corner--bl"></span>
+            <span class="pcard__corner pcard__corner--br"></span>
+            <div class="pcard__scan" aria-hidden="true"></div>
+
+            <header class="pcard__head">
+              <span class="mono">ID // 0x4D4B</span>
+              <span class="pcard__online"><span class="status__dot"></span>ONLINE</span>
+            </header>
+
+            <div class="pcard__identity">
+              <div class="avatar" id="avatar">
+                <svg class="avatar__ring" viewBox="0 0 100 100" aria-hidden="true">
+                  <circle cx="50" cy="50" r="46" />
+                </svg>
+                <span class="avatar__initials">MK</span>
+              </div>
+              <div>
+                <h2 class="pcard__name">MONIKA K</h2>
+                <p class="pcard__level mono">LVL 02 · <span>Flutter Developer</span></p>
+              </div>
+            </div>
+
+            <dl class="pcard__stats">
+              <div class="pcard__row">
+                <dt>CLASS</dt>
+                <dd>Flutter Developer</dd>
+              </div>
+              <div class="pcard__row">
+                <dt>SPECIALTY</dt>
+                <dd>Mobile Applications</dd>
+              </div>
+              <div class="pcard__row">
+                <dt>CURRENT QUEST</dt>
+                <dd>Building &amp; learning</dd>
+              </div>
+              <div class="pcard__row">
+                <dt>LOCATION</dt>
+                <dd>Tamil Nadu, India</dd>
+              </div>
+            </dl>
+
+            <div class="pcard__xp">
+              <div class="pcard__xp-head">
+                <span class="mono">XP</span>
+                <span>1+ Year Experience</span>
+              </div>
+              <div class="xpbar" aria-hidden="true"><span></span></div>
+            </div>
+
+            <footer class="pcard__loadout">
+              <span class="mono">EQUIPPED</span>
+              <ul>
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider</li>
+                <li>REST</li>
+              </ul>
+            </footer>
+          </article>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="container">
+        <ul class="stats" aria-label="Quick stats">
+          <li class="stat reveal" style="--d:0">
+            <span class="stat__value"><span data-count="1" data-pad="2">00</span>+</span>
+            <span class="stat__label">Years Experience</span>
+          </li>
+          <li class="stat reveal" style="--d:1">
+            <span class="stat__value"><span data-count="6" data-pad="2">00</span></span>
+            <span class="stat__label">Featured Projects</span>
+          </li>
+          <li class="stat reveal" style="--d:2">
+            <span class="stat__value"><span data-scramble="Flutter">Flutter</span></span>
+            <span class="stat__label">Primary Stack</span>
+          </li>
+          <li class="stat reveal" style="--d:3">
+            <span class="stat__value"><span data-scramble="B.Sc">B.Sc</span></span>
+            <span class="stat__label">Computer Science</span>
+          </li>
+        </ul>
+        <p class="tagline reveal">
+          <span class="mono">//</span> Turning ideas, APIs and UI designs into real-world Flutter applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CAREER PATH ============ -->
+    <section class="section" id="career" data-nav="career">
+      <div class="container">
+        <header class="shead reveal">
+          <p class="shead__eyebrow"><span>01</span> CAREER PATH</p>
+          <h2 class="shead__title">Career Path</h2>
+          <p class="shead__sub">How I moved from business operations into mobile development.</p>
+        </header>
+        <div class="timeline" id="timeline-wrap">
+          <span class="timeline__track" aria-hidden="true"><span class="timeline__fill"
+              id="timeline-fill"></span></span>
+          <ol class="timeline__list" id="timeline"><!-- rendered from data.js --></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILL LOADOUT ============ -->
+    <section class="section" id="skills" data-nav="skills">
+      <div class="container">
+        <header class="shead shead--split reveal">
+          <div>
+            <p class="shead__eyebrow"><span>02</span> SKILL LOADOUT</p>
+            <h2 class="shead__title">Skill Loadout</h2>
+            <p class="shead__sub">The tools and technologies I bring to every build.</p>
+          </div>
+          <div class="legend" role="group" aria-label="Filter skills by level">
+            <button class="legend__item" type="button" data-level="3" aria-pressed="false">
+              <span class="pips" data-level="3"><i></i><i></i><i></i></span>Primary
+            </button>
+            <button class="legend__item" type="button" data-level="2" aria-pressed="false">
+              <span class="pips" data-level="2"><i></i><i></i><i></i></span>Working knowledge
+            </button>
+            <button class="legend__item" type="button" data-level="1" aria-pressed="false">
+              <span class="pips" data-level="1"><i></i><i></i><i></i></span>Familiar
+            </button>
+          </div>
+        </header>
+        <div class="loadout" id="loadout"><!-- rendered from data.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECT MISSIONS ============ -->
+    <section class="section" id="projects" data-nav="projects">
+      <div class="container">
+        <header class="shead reveal">
+          <p class="shead__eyebrow"><span>03</span> PROJECT MISSIONS</p>
+          <h2 class="shead__title">Project Missions</h2>
+          <p class="shead__sub">Selected applications I've worked on.</p>
+        </header>
+
+        <div class="board">
+          <div class="board__log" role="list" id="mission-list"><!-- rendered from data.js --></div>
+          <aside class="board__brief" id="mission-brief" aria-live="polite"><!-- rendered from data.js --></aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLAYER PROFILE ============ -->
+    <section class="section" id="profile" data-nav="profile">
+      <div class="container">
+        <header class="shead reveal">
+          <p class="shead__eyebrow"><span>04</span> PLAYER PROFILE</p>
+          <h2 class="shead__title">Player Profile</h2>
+        </header>
+
+        <div class="profile">
+          <div class="profile__main reveal">
+            <h3 class="profile__heading">Building, learning and improving — one application at a time.</h3>
+            <div class="profile__body">
+              <p>I am a Flutter Developer focused on building responsive and user-friendly mobile applications. I work
+                with Flutter and Dart, REST APIs, Firebase, Provider and local storage.</p>
+              <p>I enjoy turning UI designs into functional applications, integrating APIs and exploring new
+                technologies such as AR, VR and 3D experiences.</p>
+              <p>Along with mobile development, I also have knowledge of HTML and CSS for creating structured and
+                responsive web interfaces.</p>
+            </div>
+            <dl class="profile__facts">
+              <div>
+                <dt>Education</dt>
+                <dd>BSc Computer Science</dd>
+              </div>
+              <div>
+                <dt>Base</dt>
+                <dd>Trichy, Tamil Nadu</dd>
+              </div>
+              <div>
+                <dt>Experience</dt>
+                <dd>1+ year</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="exploring reveal" style="--d:1">
+            <p class="exploring__title"><span class="label__pulse"></span>CURRENTLY EXPLORING</p>
+            <ul class="exploring__list" id="exploring"><!-- rendered from data.js --></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section class="section section--tight" id="achievements" data-nav="profile">
+      <div class="container">
+        <header class="shead reveal">
+          <p class="shead__eyebrow"><span>04.1</span> ACHIEVEMENTS</p>
+          <h2 class="shead__title">Achievements Unlocked</h2>
+          <p class="shead__sub">Hover or tap a badge for details.</p>
+        </header>
+        <ul class="badges" id="badges"><!-- rendered from data.js --></ul>
+      </div>
+    </section>
+
+    <!-- ============ BEYOND MOBILE ============ -->
+    <section class="section section--tight" id="beyond" data-nav="profile">
+      <div class="container beyond">
+        <div class="beyond__copy reveal">
+          <p class="shead__eyebrow"><span>04.2</span> BEYOND MOBILE</p>
+          <h2 class="beyond__title">I don't only build mobile interfaces.</h2>
+          <p class="beyond__text">I also have knowledge of HTML and CSS, allowing me to understand web structure,
+            responsive layouts and interface styling.</p>
+          <div class="beyond__chips">
+            <span class="chip chip--html">&lt;/&gt; HTML</span>
+            <span class="chip chip--css">{ } CSS</span>
+          </div>
+        </div>
+
+        <div class="browser reveal" style="--d:1">
+          <div class="browser__bar">
+            <span class="browser__dots"><i></i><i></i><i></i></span>
+            <span class="browser__url mono">index.html</span>
+            <div class="browser__toggle" role="group" aria-label="Preview width">
+              <button type="button" data-view="desktop" aria-pressed="true" aria-label="Desktop preview">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="13" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </button>
+              <button type="button" data-view="mobile" aria-pressed="false" aria-label="Mobile preview">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="6" y="2" width="12" height="20" rx="2" />
+                  <path d="M11 18h2" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="browser__stage">
+            <div class="mini" id="mini" data-view="desktop">
+              <div class="mini__nav"><b>site</b><span></span><span></span><span></span></div>
+              <div class="mini__hero">
+                <div>
+                  <i class="mini__h"></i>
+                  <i class="mini__p"></i>
+                  <i class="mini__p mini__p--short"></i>
+                  <i class="mini__btn"></i>
+                </div>
+                <div class="mini__img"></div>
+              </div>
+              <div class="mini__cards"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="browser__code mono" aria-hidden="true">
+            <span class="c-k">.cards</span> { <span class="c-p">display</span>: grid;
+            <span class="c-p">grid-template-columns</span>: repeat(auto-fit, minmax(<span class="c-n">120px</span>,
+            1fr)); }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CURRENT QUEST ============ -->
+    <section class="section section--tight" id="quest" data-nav="profile">
+      <div class="container">
+        <div class="quest reveal">
+          <div class="quest__head">
+            <p class="shead__eyebrow"><span>04.3</span> CURRENT QUEST</p>
+            <h2 class="quest__title">Keep learning.<br /><span>Keep building.</span></h2>
+            <p class="quest__meta mono" id="quest-meta"></p>
+          </div>
+          <ul class="objectives" id="objectives"><!-- rendered from data.js --></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ START A PROJECT ============ -->
+    <section class="section" id="contact" data-nav="contact">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__intro reveal">
+            <p class="shead__eyebrow"><span>05</span> START A PROJECT</p>
+            <h2 class="contact__title">Start a Project</h2>
+            <p class="contact__text">Have an idea, application or product in mind?<br />Let's build something useful.
+            </p>
+
+            <dl class="contact__info">
+              <div>
+                <dt class="mono">EMAIL</dt>
+                <dd><a href="mailto:monikaksee0911@gmail.com" data-link="email">monikaksee0911@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt class="mono">LOCATION</dt>
+                <dd>Trichy, Tamil Nadu, India</dd>
+              </div>
+            </dl>
+
+            <div class="contact__links">
+              <a class="btn btn--primary magnetic" href="mailto:monikaksee0911@gmail.com" data-link="email">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-10 6L2 7" />
+                </svg>
+                <span>Send Email</span>
+              </a>
+              <a class="btn btn--ghost magnetic" href="https://github.com/" target="_blank" rel="noopener"
+                data-link="github">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="cform reveal" id="contact-form" style="--d:1" novalidate>
+            <div class="cform__head mono">
+              <span>NEW_TRANSMISSION.msg</span>
+              <span class="cform__dots"><i></i><i></i><i></i></span>
+            </div>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required
+                placeholder="you@example.com" />
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required
+                placeholder="Tell me about your idea…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block magnetic">
+              <span>Send Message</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m22 2-7 20-4-9-9-4Z" />
+                <path d="M22 2 11 13" />
+              </svg>
+            </button>
+            <p class="cform__status mono" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__logo">MONIKA<span>.</span>K</p>
+        <p class="footer__role mono">Flutter Developer</p>
+      </div>
+      <p class="footer__thanks">"Thanks for exploring my profile."</p>
+      <div class="footer__end">
+        <a href="#home" class="footer__top mono">Back to top ↑</a>
+        <p class="mono">© 2026 Monika K</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ PROJECT DETAIL PANEL ============ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" tabindex="-1">
+      <div class="modal__top">
+        <button class="btn btn--ghost btn--sm" type="button" data-close>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 12H5M11 18l-6-6 6-6" />
+          </svg>
+          <span>Back to missions</span>
+        </button>
+        <span class="mono modal__crumb" id="modal-crumb"></span>
+      </div>
+      <div class="modal__content" id="modal-content"><!-- rendered by main.js --></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
